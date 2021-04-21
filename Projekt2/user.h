@@ -7,21 +7,24 @@ using namespace std;
 class User{
 public:
     User(string name="", const int age=0, const int pesel=0);
+    ~User();
 
-    string getName();
-    void setName(const string &value);
+    string name() const;
+    void setName(const string &name);
 
-    int getAge();
-    void setAge(int value);
+    int age() const;
+    void setAge(int age);
 
-    int getPesel();
-    void setPesel(int value);
+    int pesel() const;
+    void setPesel(int pesel);
 
 protected:
     string m_name;
     int m_age;
     int m_pesel;
+    static int number_of_objects;
 };
 
+ostream& operator<<(ostream &s, const User &u);
 
 #endif // USER_H

@@ -1,48 +1,29 @@
 #pragma once
 #include "electronic_device.h"
 
-Electronic_device::Electronic_device(const int number_of_users, const int production_year)
+int Electronic_device::number_of_objects=0;
+
+Electronic_device::Electronic_device(const int production_year)
 {
-    m_number_of_users=number_of_users;
+    number_of_objects++;
+
+    #ifdef _DEBUG
+        cout << "Electronic_device(const int production_year) [" << number_of_objects << "]" << endl;
+    #endif
+
     m_production_year=production_year;
-
-    if(number_of_users>0)
-        m_user=new User[number_of_users];
-    else
-        m_user=0;
 }
 
-Battery& Electronic_device::battery()
+Electronic_device::~Electronic_device()
 {
-    return m_battery;
+    number_of_objects--;
+
+    #ifdef _DEBUG
+        cout << "~Electronic_device() [" << number_of_objects << "]" << endl;
+    #endif
 }
 
-void Electronic_device::setBattery( Battery &battery)
-{
-    m_battery = battery;
-}
-
-User *Electronic_device::user()
-{
-    return m_user;
-}
-
-void Electronic_device::setUser(User *user)
-{
-    m_user = user;
-}
-
-int Electronic_device::number_of_users()
-{
-    return m_number_of_users;
-}
-
-void Electronic_device::setNumber_of_users(int number_of_users)
-{
-    m_number_of_users = number_of_users;
-}
-
-int Electronic_device::production_year()
+int Electronic_device::production_year() const
 {
     return m_production_year;
 }
@@ -52,6 +33,35 @@ void Electronic_device::setProduction_year(int production_year)
     m_production_year = production_year;
 }
 
+Battery Electronic_device::battery() const
+{
+    return m_battery;
+}
+
+void Electronic_device::setBattery(const Battery &b)
+{
+    m_battery = b;
+}
+
+User Electronic_device::user() const
+{
+    return m_user;
+}
+
+void Electronic_device::setUser(const User &user)
+{
+    m_user = user;
+}
+
+/*int Electronic_device::number_of_users()
+{
+    return m_number_of_users;
+}
+
+void Electronic_device::setNumber_of_users(int number_of_users)
+{
+    m_number_of_users = number_of_users;
+}*/
 
 void Electronic_device::operator++()
 {

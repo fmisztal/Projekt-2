@@ -9,17 +9,15 @@ public:
     Battery(const int size=0, const int lifespan=0);
     ~Battery();
 
-    void addSize(int size);
-    void addLifespan(int lifespan);
     static int batQuantity();
 
-    Battery& operator=(Battery &b);
+    //void operator=(Battery &b);
     bool operator==(const Battery &b);
 
-    int size();
+    int size() const;
     void setSize(int size);
 
-    int lifespan();
+    int lifespan() const;
     void setLifespan(int lifespan);
 
 protected:
@@ -28,6 +26,6 @@ protected:
     static int number_of_objects;
 };
 
-ostream& operator<<(ostream &s, Battery &b);
+ostream& operator<<(ostream &ost, const Battery &b);
 
 #endif // BATTERY_H

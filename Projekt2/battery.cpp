@@ -32,16 +32,6 @@ int Battery::batQuantity()
     return number_of_objects;
 };
 
-void Battery::addSize(int size)
-{
-    m_size=size;
-}
-
-void Battery::addLifespan(int lifespan)
-{
-    m_lifespan=lifespan;
-}
-
 bool Battery::operator==(const Battery &b)
 {
     #ifdef _DEBUG
@@ -51,7 +41,22 @@ bool Battery::operator==(const Battery &b)
     return m_size==b.m_size && m_lifespan==b.m_lifespan;
 }
 
-int Battery::size()
+ostream& operator<<(ostream &ost, const Battery &b)
+{
+//#ifdef _DEBUG
+//    cout << "operator<<" << endl;
+//#endif
+
+    return ost << "Battery: size- " << b.size() << " , Lifespan- " << b.lifespan() << " hours" << endl;
+};
+
+/*void Battery::operator=(Battery &b)
+{
+    b.setSize(size());
+    b.setLifespan(lifespan());
+}*/
+
+int Battery::size() const
 {
     return m_size;
 }
@@ -59,9 +64,10 @@ int Battery::size()
 void Battery::setSize(int size)
 {
     m_size = size;
+    cout << m_size << endl;
 }
 
-int Battery::lifespan()
+int Battery::lifespan() const
 {
     return m_lifespan;
 }
@@ -69,21 +75,6 @@ int Battery::lifespan()
 void Battery::setLifespan(int lifespan)
 {
     m_lifespan = lifespan;
-};
-
-ostream& operator<<(ostream &s, Battery &b)
-{
-#ifdef _DEBUG
-    cout << "operator<<" << endl;
-#endif
-
-    return s << "Battery: size- " << b.size() << ", Lifespan- " << b.lifespan() << " hours" << endl;
-};
-
-Battery& Battery::operator=(Battery &b)
-{
-    b.setSize(size());
-    b.setLifespan(lifespan());
 }
 
 

@@ -10,8 +10,6 @@ public:
     Parameter(const string name="", const int value=0);
     ~Parameter();
 
-    void addName(string name);
-    void addValue(int value);
     static int parQuantity();
 
     bool operator==(const Parameter &p);
@@ -28,6 +26,6 @@ protected:
     static int number_of_objects;
 };
 
-ostream& operator<<(ostream &s, Parameter &p);
+ostream& operator<<(ostream &ost, Parameter &p);
 
 #endif // PARAMETERS_H

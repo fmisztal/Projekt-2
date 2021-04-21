@@ -33,16 +33,6 @@ int Parameter::parQuantity()
     return number_of_objects;
 };
 
-void Parameter::addName(string name)
-{
-    m_name= name;
-};
-
-void Parameter::addValue(int value)
-{
-    m_value=value;
-};
-
 bool Parameter::operator==(const Parameter &p)
 {
     #ifdef _DEBUG
@@ -72,17 +62,26 @@ void Parameter::setValue(int value)
     m_value = value;
 };
 
-ostream& operator<<(ostream &s, Parameter &p)
+ostream& operator<<(ostream &ost, Parameter &p)
 {
-#ifdef _DEBUG
-    cout << "operator<<" << endl;
-#endif
+//#ifdef _DEBUG
+//    cout << "operator<<" << endl;
+//#endif
     
-    if(p.name()=="")
-        return s << "";
+    /*if(p.name()=="")
+        return ost << "";
 
     if(p.value()==0)
-        return s << p.name();
+        return ost << p.name();
 
-    return s << p.name() << "- " << p.value();
+    return ost << p.name() << " - " << p.value();*/
+    return ost << p.name() << " - " << p.value();
 };
+
+
+
+
+
+
+
+

@@ -20,13 +20,19 @@ Hearing_aid::Hearing_aid(const string name, const double amplification_x, const 
     m_amplification_x=amplification_x;
     m_number_of_parameters=number_of_parameters;
 
-    if(number_of_parameters>0)
+    for(int i=0; i<number_of_parameters; i++)
+    {
+        Parameter *a = new Parameter;
+        parameters.push_back(a);
+    }
+
+    /*if(number_of_parameters>0)
         m_parameter=new Parameter[number_of_parameters];
     else
-        m_parameter=0;
+        m_parameter=0;*/
 };
 
-Hearing_aid::Hearing_aid(Hearing_aid &h)
+Hearing_aid::Hearing_aid(const Hearing_aid &h)
 {
     number_of_objects++;
 
@@ -38,7 +44,15 @@ Hearing_aid::Hearing_aid(Hearing_aid &h)
     m_amplification_x=h.m_amplification_x;
     m_number_of_parameters=h.m_number_of_parameters;
 
-    if(h.m_parameter)
+    setProduction_year(h.production_year());
+    battery().setSize(h.battery().size());
+    battery().setLifespan(h.battery().lifespan());
+    setUser(h.user());
+
+    for(int i=0; i<m_number_of_parameters; i++)
+        parameters.push_back(h.parameters[i]);
+
+    /*if(h.m_parameter)
     {
         m_parameter=new Parameter[m_number_of_parameters];
         for(int i=0; i<m_number_of_parameters; i++)
@@ -46,7 +60,7 @@ Hearing_aid::Hearing_aid(Hearing_aid &h)
         setBattery(h.battery());
     }
     else
-        m_parameter = nullptr;
+        m_parameter = nullptr;*/
 };
 
 Hearing_aid::~Hearing_aid()
@@ -57,8 +71,10 @@ Hearing_aid::~Hearing_aid()
         cout << "~Hearing_aid() [" << number_of_objects << "]" << endl;
     #endif
 
-    if (m_parameter != nullptr)
-        delete[] m_parameter;
+    parameters.clear();
+
+    /*if (m_parameter != nullptr)
+        delete[] m_parameter;*/
 };
 
 int Hearing_aid::objQuantity()
@@ -76,7 +92,25 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
     m_amplification_x=h.m_amplification_x;
     m_number_of_parameters=h.m_number_of_parameters;
 
-    if(m_parameter)
+    setProduction_year(h.production_year());
+    battery().setSize(h.battery().size());
+    battery().setLifespan(h.battery().lifespan());
+    setUser(h.user());
+
+    if(number_of_parameters()!=0)
+        parameters.clear();
+    if(h.number_of_parameters()!=0)
+    {
+        //Parameter *a = new Parameter;
+        for(int i=0; i<number_of_parameters(); i++)
+        {
+            //a=h.parameters[i];
+            parameters.push_back(h.parameters[i]);
+        }
+    }
+
+
+    /*if(m_parameter)
         delete[] m_parameter;
 
     if(h.m_parameter)
@@ -86,7 +120,7 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
             m_parameter[i]=h.m_parameter[i];
     }
     else
-        m_parameter=0;
+        m_parameter=0;*/
 
     setBattery(h.battery());
     return *this;
@@ -103,7 +137,7 @@ bool Hearing_aid::operator==(const Hearing_aid &h)
         {
             int x=0;
             for(int i=0; i<m_number_of_parameters; i++)
-                if(m_parameter[i]==h.m_parameter[i])
+                if(parameters[i]==h.parameters[i])
                     x++;
             if(x==m_number_of_parameters)
                 return true;
@@ -111,24 +145,70 @@ bool Hearing_aid::operator==(const Hearing_aid &h)
     return false;
 };
 
-ostream& operator<<(ostream &s, Hearing_aid &h)
+ostream& operator<<(ostream &os, const Hearing_aid &h)
 {
     #ifdef _DEBUG
         cout << "operator<<" << endl;
     #endif
 
-    s << "-----------------------------------------" << endl;
-    s  << "Name: " << h.name() << ", Amplification x: " << h.amplification_x() << endl;
-    s << h.battery() << "Others: ";
-    for(int i=0; i<h.number_of_parameters(); i++)
+    os << "-----------------------------------------" << endl;
+    os  << "Name: " << h.name() << " , Amplification: " << h.amplification_x() << " , Production year: " << h.production_year() << endl;
+    os << h.battery();
+    if(h.number_of_parameters()!=0)
     {
-        if(i!=0)
-            cout << ", ";
-        cout << h.parameter()[i];
+        os << "Number of parameters- " << h.number_of_parameters() << " : ";
+        for(int i=0; i<h.number_of_parameters(); i++)
+        {
+            if(i!=0 && i<h.number_of_parameters())
+                os << " , ";
+            os << *(h.parameters[i]);
+        }
+        os << endl;
     }
-    s << endl << "-----------------------------------------" << endl;
-    return s;
+    os << h.user();
+    os << "-----------------------------------------" << endl;
+    return os;
 };
+
+istream& operator>>(istream &is, Hearing_aid &h)
+{
+#ifdef _DEBUG
+    cout << "operator>>" << endl;
+#endif
+    string temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8, temp9;
+    string name, user_name, par_name, par_name2;
+    double amplification;
+    int production_year, bat_size, bat_lifespan, number_of_parameters, par_value, par_value2;
+    is >> temp1 >> temp2 >> name >> temp4 >> temp5 >> amplification >> temp7 >> temp8 >> temp9 >> production_year;
+    //cout << " 1: " << temp1 << endl << " 2: " << temp2 << " 3: " << name << " 4: " << temp4 << " 5: " << temp5 << " 6: " << amplification
+    //     << " 7: " << temp7 << " 8: " << temp8 << " 9: " << temp9 << production_year << endl;
+    is >> temp1 >> temp2 >> bat_size >> temp3 >> temp4 >> bat_lifespan >> temp6;
+    //cout << bat_size << " " << bat_lifespan << endl;
+
+    is >> temp1 >> temp2 >> temp3 >> number_of_parameters >> temp4;
+    cout << number_of_parameters << " : ";
+
+    //is >> temp1 >> temp2 >> temp3 >> temp4 >> temp5 >> temp6 >> temp7;
+    //cout << temp1 << temp2 << temp3 << temp4 << temp5 << temp6 << temp7;
+    for(int i=0; i<number_of_parameters; i++)
+    {
+        if(i==0)
+        {
+            is >> par_name >> temp1 >> par_value;
+            cout << " 0: " << par_name << temp1 << par_value << " .. ";
+        }
+        if(i==1)
+        {
+            is >> par_name >> temp1 >> par_value;
+            cout << " 1: " << par_name << temp1 << par_value << " .. ";
+        }
+        //h.parameters[i]->setName(par_name);
+        //h.parameters[i]->setValue(par_value);
+    }
+    cout << endl;
+
+    return is;
+}
 
 Hearing_aid::operator string()
 {
@@ -139,7 +219,7 @@ Hearing_aid::operator string()
     return "Current sound amplification: " + to_string(m_amplification_x);
 };
 
-void Hearing_aid::operator[](int number)
+/*void Hearing_aid::operator[](int number)
 {
     #ifdef _DEBUG
         cout << "operator[]" << endl;
@@ -152,9 +232,9 @@ void Hearing_aid::operator[](int number)
     }
     cout << m_parameter[number] << endl;
     return;
-};
+};*/
 
-Parameter *Hearing_aid::parameter()
+/*Parameter *Hearing_aid::parameter()
 {
     return m_parameter;
 }
@@ -162,9 +242,9 @@ Parameter *Hearing_aid::parameter()
 void Hearing_aid::setParameter(Parameter *parameter)
 {
     m_parameter = parameter;
-}
+}*/
 
-string Hearing_aid::name()
+string Hearing_aid::name() const
 {
     return m_name;
 }
@@ -174,7 +254,7 @@ void Hearing_aid::setName(const string &name)
     m_name = name;
 }
 
-int Hearing_aid::number_of_parameters()
+int Hearing_aid::number_of_parameters() const
 {
     return m_number_of_parameters;
 }
@@ -184,7 +264,7 @@ void Hearing_aid::setNumber_of_parameters(int number_of_parameters)
     m_number_of_parameters = number_of_parameters;
 }
 
-double Hearing_aid::amplification_x()
+double Hearing_aid::amplification_x() const
 {
     return m_amplification_x;
 }
@@ -194,7 +274,7 @@ void Hearing_aid::setAmplification_x(double amplification_x)
     m_amplification_x = amplification_x;
 }
 
-void operator>>(double x, Hearing_aid &h)
+void operator|=(double x, Hearing_aid &h)
 {
 #ifdef _DEBUG
     cout << "operator>>" << endl;
@@ -202,6 +282,14 @@ void operator>>(double x, Hearing_aid &h)
 
     h.setAmplification_x(x);
 };
+
+
+
+
+
+
+
+
 
 
 

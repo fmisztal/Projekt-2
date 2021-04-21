@@ -5,28 +5,30 @@
 
 class Electronic_device{
 public:
-    Electronic_device(const int number_of_users=0, const int production_year=0);
+    Electronic_device(const int production_year=0);
+    ~Electronic_device();
 
     void operator++();
     void operator--();
 
-    Battery &battery();
-    void setBattery(Battery &battery);
-
-    User *user();
-    void setUser(User *user);
+    User user() const;
+    void setUser(const User &user);
 
     int number_of_users();
     void setNumber_of_users(int number_of_users);
 
-    int production_year();
+    int production_year() const;
     void setProduction_year(int production_year);
+
+    Battery battery() const;
+    void setBattery(const Battery &b);
 
 protected:
     Battery m_battery;
-    User *m_user=nullptr;
-    int m_number_of_users;
+    User m_user;
+    //int m_number_of_users;
     int m_production_year;
+    static int number_of_objects;
 };
 
 #endif // ELECTRONIC_DEVICE_H
