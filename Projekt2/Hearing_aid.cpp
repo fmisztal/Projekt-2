@@ -45,12 +45,20 @@ Hearing_aid::Hearing_aid(const Hearing_aid &h)
     m_number_of_parameters=h.m_number_of_parameters;
 
     setProduction_year(h.production_year());
-    battery().setSize(h.battery().size());
-    battery().setLifespan(h.battery().lifespan());
-    setUser(h.user());
+    m_battery.setSize(h.m_battery.size());
+    m_battery.setLifespan(h.m_battery.lifespan());
+
+    m_user.setAge(h.m_user.age());
+    m_user.setPesel(h.m_user.pesel());
+    m_user.setName(h.m_user.name());
 
     for(int i=0; i<m_number_of_parameters; i++)
-        parameters.push_back(h.parameters[i]);
+    {
+        Parameter *temp = new Parameter;
+        temp->setName(h.parameters[i]->name());
+        temp->setValue(h.parameters[i]->value());
+        parameters.push_back(temp);
+    }
 
     /*if(h.m_parameter)
     {
@@ -101,11 +109,12 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
         parameters.clear();
     if(h.number_of_parameters()!=0)
     {
-        //Parameter *a = new Parameter;
         for(int i=0; i<number_of_parameters(); i++)
         {
-            //a=h.parameters[i];
-            parameters.push_back(h.parameters[i]);
+            Parameter *temp = new Parameter;
+            temp->setName(h.parameters[i]->name());
+            temp->setValue(h.parameters[i]->value());
+            parameters.push_back(temp);
         }
     }
 
@@ -122,7 +131,7 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
     else
         m_parameter=0;*/
 
-    setBattery(h.battery());
+    setBattery((h.battery()));
     return *this;
 };
 
@@ -145,7 +154,7 @@ bool Hearing_aid::operator==(const Hearing_aid &h)
     return false;
 };
 
-ostream& operator<<(ostream &os, const Hearing_aid &h)
+ostream& operator<<(ostream &os, Hearing_aid &h)
 {
     #ifdef _DEBUG
         cout << "operator<<" << endl;
@@ -170,42 +179,63 @@ ostream& operator<<(ostream &os, const Hearing_aid &h)
     return os;
 };
 
+ostream& operator<<=(ostream &os, Hearing_aid &h)
+{
+    #ifdef _DEBUG
+        cout << "operator<<=" << endl;
+    #endif
+
+    os << "-----------------------------------------" << endl;
+    os << h.name() << endl;
+    os << h.amplification_x() << " , " << h.production_year() << endl;
+    os <<= h.battery();
+    if(h.number_of_parameters()!=0)
+    {
+        os << h.number_of_parameters() << endl;
+        for(int i=0; i<h.number_of_parameters(); i++)
+            os <<= *(h.parameters[i]);
+    }
+    os <<= h.user();
+    return os;
+}
+
 istream& operator>>(istream &is, Hearing_aid &h)
 {
-#ifdef _DEBUG
-    cout << "operator>>" << endl;
-#endif
-    string temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8, temp9;
-    string name, user_name, par_name, par_name2;
-    double amplification;
-    int production_year, bat_size, bat_lifespan, number_of_parameters, par_value, par_value2;
-    is >> temp1 >> temp2 >> name >> temp4 >> temp5 >> amplification >> temp7 >> temp8 >> temp9 >> production_year;
-    //cout << " 1: " << temp1 << endl << " 2: " << temp2 << " 3: " << name << " 4: " << temp4 << " 5: " << temp5 << " 6: " << amplification
-    //     << " 7: " << temp7 << " 8: " << temp8 << " 9: " << temp9 << production_year << endl;
-    is >> temp1 >> temp2 >> bat_size >> temp3 >> temp4 >> bat_lifespan >> temp6;
-    //cout << bat_size << " " << bat_lifespan << endl;
+    #ifdef _DEBUG
+        cout << "operator>>" << endl;
+    #endif
 
-    is >> temp1 >> temp2 >> temp3 >> number_of_parameters >> temp4;
-    cout << number_of_parameters << " : ";
+    string temp, name, par_name, username;
+    char sign;
+    int amplification, production_year, size , lifespan, number_of_parameters, par_value, age, pesel;
 
-    //is >> temp1 >> temp2 >> temp3 >> temp4 >> temp5 >> temp6 >> temp7;
-    //cout << temp1 << temp2 << temp3 << temp4 << temp5 << temp6 << temp7;
+    getline(is, temp);
+    getline(is, name);
+    h.setName(name);
+    is >> amplification >> sign >> production_year >> size >> sign >> lifespan >> number_of_parameters;
+    h.setAmplification_x(amplification);
+    h.setProduction_year(production_year);
+    h.battery().setSize(size);
+    h.battery().setLifespan(lifespan);
+    h.setNumber_of_parameters(number_of_parameters);
+
+    getline(is, temp);
+    h.parameters.clear();
     for(int i=0; i<number_of_parameters; i++)
     {
-        if(i==0)
-        {
-            is >> par_name >> temp1 >> par_value;
-            cout << " 0: " << par_name << temp1 << par_value << " .. ";
-        }
-        if(i==1)
-        {
-            is >> par_name >> temp1 >> par_value;
-            cout << " 1: " << par_name << temp1 << par_value << " .. ";
-        }
-        //h.parameters[i]->setName(par_name);
-        //h.parameters[i]->setValue(par_value);
+        getline(is, par_name);
+        is >> par_value;
+        getline(is, temp);
+        Parameter *temporary = new Parameter;
+        temporary->setName(par_name);
+        temporary->setValue(par_value);
+        h.parameters.push_back(temporary);
     }
-    cout << endl;
+    getline(is, username);
+    is >> age >> sign >> pesel;
+    h.user().setName(username);
+    h.user().setAge(age);
+    h.user().setPesel(pesel);
 
     return is;
 }

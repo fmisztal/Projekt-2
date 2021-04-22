@@ -19,6 +19,19 @@ User::User(string name, const int age, const int pesel)
     m_pesel=pesel;
 }
 
+User::User(const User &u)
+{
+    number_of_objects++;
+
+    #ifdef _DEBUG
+        cout << "User(const User &u) [" << number_of_objects << "]" << endl;
+    #endif
+
+    m_name=u.name();
+    m_age=u.age();
+    m_pesel=u.pesel();
+}
+
 User::~User()
 {
     number_of_objects--;
@@ -58,11 +71,16 @@ void User::setPesel(int pesel)
     m_pesel = pesel;
 };
 
-ostream& operator<<(ostream &s, const User &u)
+ostream& operator<<(ostream &s, User &u)
 {
-    s << "User: " << u.name() << " , " << u.age() << " , " << u.pesel() << endl;
-
+    return s << "User: " << u.name() << " , " << u.age() << " , " << u.pesel() << endl;
 }
+
+ostream& operator<<=(ostream &s, User &u)
+{
+    return s << u.name() << endl << u.age() << " , " << u.pesel() << endl;
+}
+
 
 
 

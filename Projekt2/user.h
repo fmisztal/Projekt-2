@@ -7,6 +7,7 @@ using namespace std;
 class User{
 public:
     User(string name="", const int age=0, const int pesel=0);
+    User(const User &u);
     ~User();
 
     string name() const;
@@ -25,6 +26,7 @@ protected:
     static int number_of_objects;
 };
 
-ostream& operator<<(ostream &s, const User &u);
+ostream& operator<<(ostream &s, User &u);
+ostream& operator<<=(ostream &s, User &u);
 
 #endif // USER_H

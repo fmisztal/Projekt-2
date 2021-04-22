@@ -7,6 +7,7 @@ using namespace std;
 class Battery{
 public:
     Battery(const int size=0, const int lifespan=0);
+    Battery(const Battery &b);
     ~Battery();
 
     static int batQuantity();
@@ -26,6 +27,7 @@ protected:
     static int number_of_objects;
 };
 
-ostream& operator<<(ostream &ost, const Battery &b);
+ostream& operator<<(ostream &ost, Battery &b);
+ostream& operator<<=(ostream &ost, Battery &b);
 
 #endif // BATTERY_H

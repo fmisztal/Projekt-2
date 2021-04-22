@@ -8,6 +8,7 @@ using namespace std;
 class Parameter{
 public:
     Parameter(const string name="", const int value=0);
+    Parameter(const Parameter &p);
     ~Parameter();
 
     static int parQuantity();
@@ -27,5 +28,6 @@ protected:
 };
 
 ostream& operator<<(ostream &ost, Parameter &p);
+ostream& operator<<=(ostream &ost, Parameter &p);
 
 #endif // PARAMETERS_H

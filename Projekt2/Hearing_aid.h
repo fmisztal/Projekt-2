@@ -42,7 +42,8 @@ protected:
     static int number_of_objects;
 };
 
-ostream& operator<<(ostream &os, const Hearing_aid &h);
+ostream& operator<<(ostream &os, Hearing_aid &h);
+ostream& operator<<=(ostream &os, Hearing_aid &h);
 istream& operator>>(istream &is, Hearing_aid &h);
 void operator|=(double x, Hearing_aid &h);
 

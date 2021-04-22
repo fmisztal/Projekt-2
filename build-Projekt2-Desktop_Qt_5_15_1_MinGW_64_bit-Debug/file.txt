@@ -1,6 +1,11 @@
 -----------------------------------------
-Name: wdff , Amplification: 3 , Production year: 1999
-Battery: size- 12 , Lifespan- 5 hours
-Number of parameters- 2 : cs - 897 , w222 - 111
-User: ADMIN , 12 , 123456789
------------------------------------------
+wdff
+3 , 1999
+12 , 5
+2
+cs
+897
+w222
+111
+ADMIN
+12 , 123456789

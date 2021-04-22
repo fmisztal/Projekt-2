@@ -6,12 +6,13 @@
 class Electronic_device{
 public:
     Electronic_device(const int production_year=0);
+    Electronic_device(const Electronic_device &e);
     ~Electronic_device();
 
     void operator++();
     void operator--();
 
-    User user() const;
+    User& user();
     void setUser(const User &user);
 
     int number_of_users();
@@ -20,7 +21,7 @@ public:
     int production_year() const;
     void setProduction_year(int production_year);
 
-    Battery battery() const;
+    Battery& battery();
     void setBattery(const Battery &b);
 
 protected:

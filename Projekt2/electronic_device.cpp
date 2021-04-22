@@ -14,6 +14,19 @@ Electronic_device::Electronic_device(const int production_year)
     m_production_year=production_year;
 }
 
+Electronic_device::Electronic_device(const Electronic_device &e)
+{
+    number_of_objects++;
+
+    #ifdef _DEBUG
+        cout << "Electronic_device(const Electronic_device &e) [" << number_of_objects << "]" << endl;
+    #endif
+
+    m_production_year=e.production_year();
+    m_battery=battery();
+    m_user=user();
+}
+
 Electronic_device::~Electronic_device()
 {
     number_of_objects--;
@@ -33,7 +46,7 @@ void Electronic_device::setProduction_year(int production_year)
     m_production_year = production_year;
 }
 
-Battery Electronic_device::battery() const
+Battery &Electronic_device::battery()
 {
     return m_battery;
 }
@@ -43,7 +56,7 @@ void Electronic_device::setBattery(const Battery &b)
     m_battery = b;
 }
 
-User Electronic_device::user() const
+User &Electronic_device::user()
 {
     return m_user;
 }

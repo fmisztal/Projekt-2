@@ -19,6 +19,18 @@ Parameter::Parameter(const string name, const int value)
     m_value=value;
 };
 
+Parameter::Parameter(const Parameter &p)
+{
+    number_of_objects++;
+
+    #ifdef _DEBUG
+        cout << "Parameter(const Parameter &p) [" << number_of_objects << "]" << endl;
+    #endif
+
+    m_name=p.m_name;
+    m_value=p.m_value;
+}
+
 Parameter::~Parameter()
 {
     number_of_objects--;
@@ -68,16 +80,20 @@ ostream& operator<<(ostream &ost, Parameter &p)
 //    cout << "operator<<" << endl;
 //#endif
     
-    /*if(p.name()=="")
+    if(p.name()=="")
         return ost << "";
 
     if(p.value()==0)
         return ost << p.name();
 
-    return ost << p.name() << " - " << p.value();*/
     return ost << p.name() << " - " << p.value();
+    //return ost << p.name() << " - " << p.value();
 };
 
+ostream& operator<<=(ostream &ost, Parameter &p)
+{
+    return ost << p.name() << endl << p.value() << endl;
+}
 
 
 
