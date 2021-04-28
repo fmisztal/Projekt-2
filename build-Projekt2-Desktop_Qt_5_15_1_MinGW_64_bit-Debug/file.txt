@@ -1,8 +1,11 @@
----SMARTPHONE---
-Samsung
-1234 , 1
-1999
-1 , 2 , 3
+---HEARING_AID---
+wdff
+3 , 1999
 12 , 5
+2
+cs
+897
+w222
+111
 ADMIN
 12 , 123456789

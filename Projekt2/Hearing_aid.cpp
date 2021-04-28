@@ -65,6 +65,11 @@ Hearing_aid::~Hearing_aid()
         cout << "~Hearing_aid() [" << number_of_objects << "]" << endl;
     #endif
 
+    while(parameters.size()!=0)
+    {
+        delete *(--parameters.end());
+        parameters.pop_back();
+    }
     parameters.clear();
 };
 

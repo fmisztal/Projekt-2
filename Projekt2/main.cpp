@@ -12,7 +12,7 @@ vector<Electronic_device*> electronic_devices;
 
 int main()
 {
-    /*cout <<  endl;
+    cout <<  endl;
 
     Hearing_aid a("wdff",3,2);
     a.setProduction_year(1999);
@@ -59,7 +59,7 @@ int main()
 
     //cout << b << endl << endl;
 
-    //a.ownership();
+    a.ownership();
 
     ofstream ofs;
     ofs.open("file.txt", ios_base::out);
@@ -72,11 +72,11 @@ int main()
     ifs >> c;
     ifs.close();
 
-    cout << endl << endl << c << endl << endl;*/
+    cout << endl << endl << c << endl << endl;
 
 
 
-    Smartphone a(1, 2, 3, "Samsung", 1234, true);
+    /*Smartphone a(1, 2, 3, "Samsung", 1234, true);
     //Phone a("Samsung", 1234, true);
     Smartphone c;
     a.setProduction_year(1999);
@@ -100,7 +100,7 @@ int main()
 
     //cout << a << endl;
 
-    cout << endl << endl;
+    cout << endl << endl;*/
 
     return 0;
 }
