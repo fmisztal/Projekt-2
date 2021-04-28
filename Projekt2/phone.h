@@ -4,7 +4,14 @@
 
 class Phone : public Electronic_device{
 public:
-    Phone(string brand="", const int processor=0, const bool dual_sim=true);
+    Phone(string brand="", const int processor=0, const bool dual_sim=false);
+    Phone(const Phone &p);
+    ~Phone();
+
+    static int phoneQuantity();
+
+    Phone& operator=(const Phone &p);
+    bool operator==(const Phone &p);
 
     string brand() const;
     void setBrand(const string &brand);
@@ -19,7 +26,10 @@ protected:
     string m_brand;
     int m_processor;
     bool m_dual_sim;
-
+    static int number_of_objects;
 };
+
+ostream& operator<<(ostream &ost, Phone &p);
+ostream& operator<<=(ostream &ost, Phone &p);
 
 #endif // PHONE_H

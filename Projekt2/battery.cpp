@@ -44,21 +44,20 @@ int Battery::batQuantity()
     return number_of_objects;
 };
 
+Battery& Battery::operator=(const Battery &b)
+{
+    m_size=b.size();
+    m_lifespan=b.lifespan();
+    return *this;
+}
+
 bool Battery::operator==(const Battery &b)
 {
-    #ifdef _DEBUG
-        cout << "operator==" << endl;
-    #endif
-
     return m_size==b.m_size && m_lifespan==b.m_lifespan;
 }
 
 ostream& operator<<(ostream &ost, Battery &b)
 {
-//#ifdef _DEBUG
-//    cout << "operator<<" << endl;
-//#endif
-
     return ost << "Battery: size- " << b.size() << " , Lifespan- " << b.lifespan() << " hours" << endl;
 };
 

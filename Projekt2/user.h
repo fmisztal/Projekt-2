@@ -10,6 +10,11 @@ public:
     User(const User &u);
     ~User();
 
+    static int userQuantity();
+
+    User& operator=(const User &b);
+    bool operator==(const User &b);
+
     string name() const;
     void setName(const string &name);
 

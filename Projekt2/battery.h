@@ -12,7 +12,7 @@ public:
 
     static int batQuantity();
 
-    //void operator=(Battery &b);
+    Battery& operator=(const Battery &b);
     bool operator==(const Battery &b);
 
     int size() const;

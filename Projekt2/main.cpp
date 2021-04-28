@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include "electronic_device.h"
+#include "phone.h"
+#include "smartphone.h"
 #include "Hearing_aid.h"
 #include "vector"
 
@@ -12,7 +14,7 @@ int main()
 {
     cout <<  endl;
 
-    Hearing_aid a("wdff",3,2);
+    /*Hearing_aid a("wdff",3,2);
     a.setProduction_year(1999);
     a.battery().setSize(12);
     a.battery().setLifespan(5);
@@ -32,15 +34,20 @@ int main()
     cout <<  endl;
 
     cout << a << endl << b << endl;
+
     a.parameters[0]->setName("erdsfdsff");
     a.parameters[0]->setValue(420);
     a.parameters[1]->setName("xxxxx");
     a.parameters[1]->setValue(2137);
+
+    a.battery().setSize(99999999);
+    a.battery().setLifespan(999999999);
+
     cout << a << endl << b << endl;
 
     cout << endl;
 
-    /*Hearing_aid c("egre",999,4);
+    Hearing_aid c("egre",999,4);
 
     cout << "......" << endl;
 
@@ -55,6 +62,7 @@ int main()
     ofstream ofs;
     ofs.open("file.txt", ios_base::out);
     ofs <<= b;
+    ofs <<= a;
     ofs.close();
 
     ifstream ifs;
@@ -63,6 +71,11 @@ int main()
     ifs.close();
 
     cout << c << endl;*/
+
+
+
+    Smartphone a(1, 2, 3, "Samsung", 1234, true);
+    cout << a << endl;
 
     cout << endl << endl;
 

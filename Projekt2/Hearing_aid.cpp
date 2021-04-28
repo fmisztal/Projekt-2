@@ -25,11 +25,6 @@ Hearing_aid::Hearing_aid(const string name, const double amplification_x, const 
         Parameter *a = new Parameter;
         parameters.push_back(a);
     }
-
-    /*if(number_of_parameters>0)
-        m_parameter=new Parameter[number_of_parameters];
-    else
-        m_parameter=0;*/
 };
 
 Hearing_aid::Hearing_aid(const Hearing_aid &h)
@@ -59,16 +54,6 @@ Hearing_aid::Hearing_aid(const Hearing_aid &h)
         temp->setValue(h.parameters[i]->value());
         parameters.push_back(temp);
     }
-
-    /*if(h.m_parameter)
-    {
-        m_parameter=new Parameter[m_number_of_parameters];
-        for(int i=0; i<m_number_of_parameters; i++)
-            m_parameter[i]=h.m_parameter[i];    
-        setBattery(h.battery());
-    }
-    else
-        m_parameter = nullptr;*/
 };
 
 Hearing_aid::~Hearing_aid()
@@ -80,9 +65,6 @@ Hearing_aid::~Hearing_aid()
     #endif
 
     parameters.clear();
-
-    /*if (m_parameter != nullptr)
-        delete[] m_parameter;*/
 };
 
 int Hearing_aid::objQuantity()
@@ -101,8 +83,10 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
     m_number_of_parameters=h.m_number_of_parameters;
 
     setProduction_year(h.production_year());
-    battery().setSize(h.battery().size());
-    battery().setLifespan(h.battery().lifespan());
+    //battery().setSize(h.battery().size());
+    //battery().setLifespan(h.battery().lifespan());
+    //battery()=h.battery();
+    setBattery(h.battery());
     setUser(h.user());
 
     if(number_of_parameters()!=0)
@@ -117,19 +101,6 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
             parameters.push_back(temp);
         }
     }
-
-
-    /*if(m_parameter)
-        delete[] m_parameter;
-
-    if(h.m_parameter)
-    {
-        m_parameter=new Parameter[m_number_of_parameters];
-        for(int i=0; i<m_number_of_parameters; i++)
-            m_parameter[i]=h.m_parameter[i];
-    }
-    else
-        m_parameter=0;*/
 
     setBattery((h.battery()));
     return *this;
@@ -160,7 +131,7 @@ ostream& operator<<(ostream &os, Hearing_aid &h)
         cout << "operator<<" << endl;
     #endif
 
-    os << "-----------------------------------------" << endl;
+    os << "-------------------------------------------------" << endl;
     os  << "Name: " << h.name() << " , Amplification: " << h.amplification_x() << " , Production year: " << h.production_year() << endl;
     os << h.battery();
     if(h.number_of_parameters()!=0)
@@ -175,7 +146,7 @@ ostream& operator<<(ostream &os, Hearing_aid &h)
         os << endl;
     }
     os << h.user();
-    os << "-----------------------------------------" << endl;
+    os << "-------------------------------------------------" << endl;
     return os;
 };
 
