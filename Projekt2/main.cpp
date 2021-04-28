@@ -12,9 +12,9 @@ vector<Electronic_device*> electronic_devices;
 
 int main()
 {
-    cout <<  endl;
+    /*cout <<  endl;
 
-    /*Hearing_aid a("wdff",3,2);
+    Hearing_aid a("wdff",3,2);
     a.setProduction_year(1999);
     a.battery().setSize(12);
     a.battery().setLifespan(5);
@@ -49,19 +49,45 @@ int main()
 
     Hearing_aid c("egre",999,4);
 
-    cout << "......" << endl;
+    //cout << "......" << endl;
 
     electronic_devices.push_back(&a);
     electronic_devices.push_back(&b);
     electronic_devices.push_back(&c);
 
-    cout << "......" << endl;
+    //cout << "......" << endl;
 
-    cout << b << endl << endl;
+    //cout << b << endl << endl;
+
+    //a.ownership();
 
     ofstream ofs;
     ofs.open("file.txt", ios_base::out);
     ofs <<= b;
+    //ofs <<= a;
+    ofs.close();
+
+    ifstream ifs;
+    ifs.open("file.txt", ios_base::in);
+    ifs >> c;
+    ifs.close();
+
+    cout << endl << endl << c << endl << endl;*/
+
+
+
+    Smartphone a(1, 2, 3, "Samsung", 1234, true);
+    //Phone a("Samsung", 1234, true);
+    Smartphone c;
+    a.setProduction_year(1999);
+    a.user().setName("ADMIN");
+    a.user().setAge(12);
+    a.user().setPesel(123456789);
+    a.battery().setSize(12);
+    a.battery().setLifespan(5);
+
+    ofstream ofs;
+    ofs.open("file.txt", ios_base::out);
     ofs <<= a;
     ofs.close();
 
@@ -70,12 +96,9 @@ int main()
     ifs >> c;
     ifs.close();
 
-    cout << c << endl;*/
+    cout << endl << endl << c << endl << endl;
 
-
-
-    Smartphone a(1, 2, 3, "Samsung", 1234, true);
-    cout << a << endl;
+    //cout << a << endl;
 
     cout << endl << endl;
 

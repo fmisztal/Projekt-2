@@ -7,10 +7,12 @@ class Electronic_device{
 public:
     Electronic_device(const int production_year=0);
     Electronic_device(const Electronic_device &e);
-    ~Electronic_device();
+    virtual ~Electronic_device();
 
     void operator++();
     void operator--();
+
+    virtual void ownership()=0;
 
     User& user();
     void setUser(const User &user);
@@ -27,7 +29,6 @@ public:
 protected:
     Battery m_battery;
     User m_user;
-    //int m_number_of_users;
     int m_production_year;
     static int number_of_objects;
 };

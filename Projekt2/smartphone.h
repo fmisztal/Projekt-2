@@ -11,6 +11,8 @@ public:
     Smartphone& operator=(const Smartphone &s);
     bool operator==(const Smartphone &s);
 
+    virtual void ownership();
+
     int inches() const;
     void setInches(int inches);
 
@@ -29,5 +31,6 @@ private:
 
 ostream& operator<<(ostream &ost, Smartphone &s);
 ostream& operator<<=(ostream &ost, Smartphone &s);
+istream& operator>>(istream &is, Smartphone &s);
 
 #endif // SMARTPHONE_H

@@ -20,8 +20,7 @@ public:
     //void operator[](int number);
     operator string();
 
-    //Parameter *parameter();
-    //void setParameter(Parameter *parameter);
+    virtual void ownership();
 
     string name() const;
     void setName(const string &name);

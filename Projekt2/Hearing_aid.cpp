@@ -40,6 +40,7 @@ Hearing_aid::Hearing_aid(const Hearing_aid &h)
     m_number_of_parameters=h.m_number_of_parameters;
 
     setProduction_year(h.production_year());
+
     m_battery.setSize(h.m_battery.size());
     m_battery.setLifespan(h.m_battery.lifespan());
 
@@ -102,7 +103,6 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
         }
     }
 
-    setBattery((h.battery()));
     return *this;
 };
 
@@ -112,7 +112,7 @@ bool Hearing_aid::operator==(const Hearing_aid &h)
         cout << "operator==" << endl;
     #endif
 
-    if(m_battery==h.m_battery && m_name==h.m_name && m_amplification_x==h.m_amplification_x)
+    if(m_battery==h.m_battery && m_user==h.m_user && m_production_year==h.m_production_year && m_name==h.m_name && m_amplification_x==h.m_amplification_x)
         if(m_number_of_parameters==h.m_number_of_parameters)
         {
             int x=0;
@@ -124,6 +124,11 @@ bool Hearing_aid::operator==(const Hearing_aid &h)
         }
     return false;
 };
+
+void Hearing_aid::ownership()
+{
+    cout << "This HEARING AID belongs to " << m_user << endl;
+}
 
 ostream& operator<<(ostream &os, Hearing_aid &h)
 {
@@ -156,7 +161,7 @@ ostream& operator<<=(ostream &os, Hearing_aid &h)
         cout << "operator<<=" << endl;
     #endif
 
-    os << "-----------------------------------------" << endl;
+    os << "---HEARING_AID---" << endl;
     os << h.name() << endl;
     os << h.amplification_x() << " , " << h.production_year() << endl;
     os <<= h.battery();
@@ -181,6 +186,15 @@ istream& operator>>(istream &is, Hearing_aid &h)
     int amplification, production_year, size , lifespan, number_of_parameters, par_value, age, pesel;
 
     getline(is, temp);
+    while(temp!="---HEARING_AID---")
+    {
+        getline(is, temp);
+        if(temp=="")
+        {
+            cout << "Couldn't find this kind of object in database" << endl;
+            return is;
+        }
+    }
     getline(is, name);
     h.setName(name);
     is >> amplification >> sign >> production_year >> size >> sign >> lifespan >> number_of_parameters;
@@ -235,16 +249,6 @@ Hearing_aid::operator string()
     return;
 };*/
 
-/*Parameter *Hearing_aid::parameter()
-{
-    return m_parameter;
-}
-
-void Hearing_aid::setParameter(Parameter *parameter)
-{
-    m_parameter = parameter;
-}*/
-
 string Hearing_aid::name() const
 {
     return m_name;
@@ -278,7 +282,7 @@ void Hearing_aid::setAmplification_x(double amplification_x)
 void operator|=(double x, Hearing_aid &h)
 {
 #ifdef _DEBUG
-    cout << "operator>>" << endl;
+    cout << "operator|=" << endl;
 #endif
 
     h.setAmplification_x(x);

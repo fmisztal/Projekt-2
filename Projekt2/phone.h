@@ -13,6 +13,8 @@ public:
     Phone& operator=(const Phone &p);
     bool operator==(const Phone &p);
 
+    virtual void ownership();
+
     string brand() const;
     void setBrand(const string &brand);
 
@@ -31,5 +33,6 @@ protected:
 
 ostream& operator<<(ostream &ost, Phone &p);
 ostream& operator<<=(ostream &ost, Phone &p);
+istream& operator>>(istream &is, Phone &p);
 
 #endif // PHONE_H

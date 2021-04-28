@@ -91,7 +91,7 @@ void User::setPesel(int pesel)
 
 ostream& operator<<(ostream &s, User &u)
 {
-    return s << "User: " << u.name() << " , " << u.age() << " , " << u.pesel() << endl;
+    return s << "user: " << u.name() << " , " << u.age() << " , " << u.pesel() << endl;
 }
 
 ostream& operator<<=(ostream &s, User &u)

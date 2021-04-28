@@ -66,16 +66,6 @@ void Electronic_device::setUser(const User &user)
     m_user = user;
 }
 
-/*int Electronic_device::number_of_users()
-{
-    return m_number_of_users;
-}
-
-void Electronic_device::setNumber_of_users(int number_of_users)
-{
-    m_number_of_users = number_of_users;
-}*/
-
 void Electronic_device::operator++()
 {
     #ifdef _DEBUG
