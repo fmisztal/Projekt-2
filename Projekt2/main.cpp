@@ -33,17 +33,17 @@ int main()
 
     cout <<  endl;
 
-    cout << a << endl << b << endl;
+    //cout << a << endl << b << endl;
 
-    a.parameters[0]->setName("erdsfdsff");
+    /*a.parameters[0]->setName("erdsfdsff");
     a.parameters[0]->setValue(420);
     a.parameters[1]->setName("xxxxx");
     a.parameters[1]->setValue(2137);
 
     a.battery().setSize(99999999);
-    a.battery().setLifespan(999999999);
+    a.battery().setLifespan(999999999);*/
 
-    cout << a << endl << b << endl;
+    //cout << a << endl << b << endl;
 
     cout << endl;
 
@@ -61,7 +61,7 @@ int main()
 
     a.ownership();
 
-    ofstream ofs;
+    /*ofstream ofs;
     ofs.open("file.txt", ios_base::out);
     ofs <<= b;
     //ofs <<= a;
@@ -72,7 +72,7 @@ int main()
     ifs >> c;
     ifs.close();
 
-    cout << endl << endl << c << endl << endl;
+    cout << endl << endl << c << endl << endl;*/
 
 
 
@@ -101,6 +101,12 @@ int main()
     //cout << a << endl;
 
     cout << endl << endl;*/
+
+    //cout << endl << endl << " .  " << endl << endl;
+    //electronic_devices[1]->draw();
+    //cout << endl << endl << " .  " << endl << endl;
+
+    electronic_devices[0]->save();
 
     return 0;
 }

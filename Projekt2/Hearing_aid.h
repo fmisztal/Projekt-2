@@ -14,13 +14,15 @@ public:
     ~Hearing_aid();
 
     static int objQuantity();
+    void deleteVector();
+    virtual void ownership();
+    virtual void draw();
+    virtual void save();
 
     Hearing_aid& operator=(Hearing_aid &h);
     bool operator==(const Hearing_aid &h);
     //void operator[](int number);
     operator string();
-
-    virtual void ownership();
 
     string name() const;
     void setName(const string &name);
@@ -34,7 +36,6 @@ public:
     vector<Parameter*> parameters;
 
 protected:
-    //Parameter *m_parameter=nullptr;
     string m_name;
     int m_number_of_parameters;
     double m_amplification_x;

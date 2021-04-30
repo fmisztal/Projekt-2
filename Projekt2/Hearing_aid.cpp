@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 #include <cstring>
 #include "Hearing_aid.h"
 #include "electronic_device.h"
@@ -65,18 +66,23 @@ Hearing_aid::~Hearing_aid()
         cout << "~Hearing_aid() [" << number_of_objects << "]" << endl;
     #endif
 
-    while(parameters.size()!=0)
-    {
-        delete *(--parameters.end());
-        parameters.pop_back();
-    }
-    parameters.clear();
+    deleteVector();
 };
 
 int Hearing_aid::objQuantity()
 {
     return number_of_objects;
 };
+
+void Hearing_aid::deleteVector()
+{
+    while(parameters.size()!=0)
+    {
+        delete *(--parameters.end());
+        parameters.pop_back();
+    }
+    parameters.clear();
+}
 
 Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
 {
@@ -95,8 +101,9 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
     setBattery(h.battery());
     setUser(h.user());
 
-    if(number_of_parameters()!=0)
-        parameters.clear();
+    if(parameters.size()!=0)
+        deleteVector();
+
     if(h.number_of_parameters()!=0)
     {
         for(int i=0; i<number_of_parameters(); i++)
@@ -138,7 +145,7 @@ void Hearing_aid::ownership()
 ostream& operator<<(ostream &os, Hearing_aid &h)
 {
     #ifdef _DEBUG
-        cout << "operator<<" << endl;
+        cout << "operator<<[H]" << endl;
     #endif
 
     os << "-------------------------------------------------" << endl;
@@ -210,7 +217,9 @@ istream& operator>>(istream &is, Hearing_aid &h)
     h.setNumber_of_parameters(number_of_parameters);
 
     getline(is, temp);
-    h.parameters.clear();
+
+    h.deleteVector();
+
     for(int i=0; i<number_of_parameters; i++)
     {
         getline(is, par_name);
@@ -286,15 +295,59 @@ void Hearing_aid::setAmplification_x(double amplification_x)
 
 void operator|=(double x, Hearing_aid &h)
 {
-#ifdef _DEBUG
-    cout << "operator|=" << endl;
-#endif
+    #ifdef _DEBUG
+        cout << "operator|=" << endl;
+    #endif
 
     h.setAmplification_x(x);
 };
 
+void Hearing_aid::draw()
+{
+    #ifdef _DEBUG
+        cout << "draw [H]" << endl;
+    #endif
 
+    Electronic_device::draw();
 
+    cout << "Name: " << name() << " , Amplification: " << amplification_x() << endl;
+    if(number_of_parameters()!=0)
+    {
+        cout << "Number of parameters- " << number_of_parameters() << " : ";
+        for(int i=0; i<number_of_parameters(); i++)
+        {
+            if(i!=0 && i<number_of_parameters())
+                cout << " , ";
+            cout << *(parameters[i]);
+        }
+        cout << endl;
+    }
+}
+
+void Hearing_aid::save()
+{
+    ofstream ofs;
+    ofs.open("file.txt", ios_base::out);
+
+    ofs << "---HEARING_AID---" << endl;
+    ofs << name() << endl;
+    ofs << amplification_x() << " , ";
+
+    ofs.close();
+
+    Electronic_device::save();
+
+    ofs.open("file.txt", ios_base::app);
+
+    if(number_of_parameters()!=0)
+    {
+        ofs << number_of_parameters() << endl;
+        for(int i=0; i<number_of_parameters(); i++)
+            ofs <<= *(parameters[i]);
+    }
+
+    ofs.close();
+}
 
 
 

@@ -1,4 +1,5 @@
 #pragma once
+#include <fstream>
 #include "electronic_device.h"
 
 int Electronic_device::number_of_objects=0;
@@ -85,6 +86,34 @@ void Electronic_device::operator--()
     int x=m_battery.lifespan()-5;
     m_battery.setLifespan(x);
 }
+
+void Electronic_device::draw()
+{
+    #ifdef _DEBUG
+        cout << "draw [E]" << endl;
+    #endif
+
+    cout << "Production year: " << production_year() << endl;
+    cout << battery() << user();
+}
+
+void Electronic_device::save()
+{
+    ofstream ofs;
+    ofs.open("file.txt", ios_base::app);
+
+    ofs << production_year() << endl;
+    ofs <<= battery();
+    ofs <<= user();
+
+    ofs.close();
+}
+
+
+
+
+
+
 
 
 

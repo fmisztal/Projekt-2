@@ -13,6 +13,8 @@ public:
     void operator--();
 
     virtual void ownership()=0;
+    virtual void draw();
+    virtual void save();
 
     User& user();
     void setUser(const User &user);
@@ -32,5 +34,7 @@ protected:
     int m_production_year;
     static int number_of_objects;
 };
+
+ostream& operator<<(ostream &ost, Electronic_device &e);
 
 #endif // ELECTRONIC_DEVICE_H
