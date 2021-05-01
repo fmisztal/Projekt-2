@@ -41,9 +41,9 @@ Smartphone::Smartphone(const Smartphone &s)
     m_user.setPesel(s.m_user.pesel());
     m_user.setName(s.m_user.name());
 
-    m_inches=inches();
-    m_weight=weight();
-    m_megapiksels=megapiksels();
+    m_inches=s.inches();
+    m_weight=s.weight();
+    m_megapiksels=s.megapiksels();
     m_brand=s.brand();
     m_processor=s.processor();
     m_dual_sim=s.dual_sim();

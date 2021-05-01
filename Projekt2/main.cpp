@@ -30,7 +30,11 @@ int main()
     a.battery().setLifespan(5);
 
     //Hearing_aid b=a;
-    //Phone b;
+    //Hearing_aid c;
+    //c=a;
+    //Phone b=a;
+    //Phone c;
+    //c=a;
     Smartphone b=a;
     Smartphone c;
     c=a;
