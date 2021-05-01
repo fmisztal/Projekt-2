@@ -12,7 +12,7 @@ Parameter::Parameter(const string name, const int value)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Parameter(const string name, const int value) [" << number_of_objects << "]" << endl;
+        cout << "Parameter(const string, const int) [" << number_of_objects << "]" << endl;
     #endif
 
     m_name=name;
@@ -24,7 +24,7 @@ Parameter::Parameter(const Parameter &p)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Parameter(const Parameter &p) [" << number_of_objects << "]" << endl;
+        cout << "Parameter(const Parameter) [" << number_of_objects << "]" << endl;
     #endif
 
     m_name=p.m_name;
@@ -76,10 +76,6 @@ void Parameter::setValue(int value)
 
 ostream& operator<<(ostream &ost, Parameter &p)
 {
-//#ifdef _DEBUG
-//    cout << "operator<<" << endl;
-//#endif
-    
     if(p.name()=="")
         return ost << "";
 
@@ -87,7 +83,6 @@ ostream& operator<<(ostream &ost, Parameter &p)
         return ost << p.name();
 
     return ost << p.name() << " - " << p.value();
-    //return ost << p.name() << " - " << p.value();
 };
 
 ostream& operator<<=(ostream &ost, Parameter &p)

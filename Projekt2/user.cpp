@@ -14,7 +14,7 @@ User::User(string name, const int age, const int pesel)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "User(string name, const int age, const int pesel) [" << number_of_objects << "]" << endl;
+        cout << "User(string, const int, const int) [" << number_of_objects << "]" << endl;
     #endif
 
     m_name=name;
@@ -27,7 +27,7 @@ User::User(const User &u)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "User(const User &u) [" << number_of_objects << "]" << endl;
+        cout << "User(const User) [" << number_of_objects << "]" << endl;
     #endif
 
     m_name=u.name();

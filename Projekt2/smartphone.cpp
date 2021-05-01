@@ -13,7 +13,7 @@ Smartphone::Smartphone(const int inches, const int weight, const int megapiksels
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Smartphone(const int inches, const int weight, const int megapiksels) [" << number_of_objects << "]" << endl;
+        cout << "Smartphone(const int, const int, const int) [" << number_of_objects << "]" << endl;
     #endif
 
     m_inches=inches;
@@ -29,7 +29,7 @@ Smartphone::Smartphone(const Smartphone &s)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Smartphone(const Smartphone &s) [" << number_of_objects << "]" << endl;
+        cout << "Smartphone(const Smartphone) [" << number_of_objects << "]" << endl;
     #endif
 
     setProduction_year(s.production_year());
@@ -159,7 +159,7 @@ void Smartphone::draw()
         cout << "draw() [S]" << endl;
     #endif
 
-    cout << "---SMARTPHONE---" << endl;
+    cout << "-----------SMARTPHONE-----------" << endl;
     Electronic_device *ctpr;
     ctpr=dynamic_cast<Electronic_device*>(this);
     cout << *ctpr;
@@ -183,7 +183,7 @@ void Smartphone::save()
         return;
     }
 
-    ofs << "---SMARTPHONE---" << endl;
+    ofs << "-----------SMARTPHONE-----------" << endl;
 
     Electronic_device *ctpr;
     ctpr=dynamic_cast<Electronic_device*>(this);
@@ -211,7 +211,7 @@ void Smartphone::open()
     }
     string temp;
     getline(ifs, temp);
-    while(temp!="---SMARTPHONE---")
+    while(temp!="-----------SMARTPHONE-----------")
     {
         getline(ifs, temp);
         if(temp=="")

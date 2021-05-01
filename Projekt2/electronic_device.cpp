@@ -9,7 +9,7 @@ Electronic_device::Electronic_device(const int production_year)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Electronic_device(const int production_year) [" << number_of_objects << "]" << endl;
+        cout << "Electronic_device(const int) [" << number_of_objects << "]" << endl;
     #endif
 
     m_production_year=production_year;
@@ -20,7 +20,7 @@ Electronic_device::Electronic_device(const Electronic_device &e)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Electronic_device(const Electronic_device &e) [" << number_of_objects << "]" << endl;
+        cout << "Electronic_device(const Electronic_device) [" << number_of_objects << "]" << endl;
     #endif
 
     m_production_year=e.production_year();
@@ -87,40 +87,6 @@ void Electronic_device::operator--()
     m_battery.setLifespan(x);
 }
 
-/*void Electronic_device::draw()
-{
-    #ifdef _DEBUG
-        cout << "draw [E]" << endl;
-    #endif
-
-    cout << "Production year: " << production_year() << endl;
-    cout << battery() << user();
-}
-
-void Electronic_device::save()
-{
-    ofstream ofs;
-    ofs.open("file.txt", ios_base::app);
-
-    ofs << production_year() << endl;
-    ofs <<= battery();
-    ofs <<= user();
-
-    ofs.close();
-}
-
-void Electronic_device::open()
-{
-    ifstream ifs;
-    ifs.open("file.txt", ios_base::in);
-
-    string temp;
-    ifs >> m_battery;
-    getline(ifs, temp);
-    ifs >> m_user;
-    ifs.close();
-}*/
-
 istream &operator>>(istream &is, Electronic_device &e)
 {
     string temp;
@@ -144,8 +110,6 @@ ostream& operator<<=(ostream &ost, Electronic_device &e)
     ost <<= e.battery();
     return ost <<= e.user();
 }
-
-
 
 
 

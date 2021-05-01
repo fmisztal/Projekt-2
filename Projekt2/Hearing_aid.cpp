@@ -14,7 +14,7 @@ Hearing_aid::Hearing_aid(const string name, const double amplification_x, const 
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Hearing_aid(const string name, const int production_year, const int number_of_parameters) [" << number_of_objects << "]" << endl;
+        cout << "Hearing_aid(const string, const int, const int) [" << number_of_objects << "]" << endl;
     #endif
 
     m_name=name;
@@ -33,7 +33,7 @@ Hearing_aid::Hearing_aid(const Hearing_aid &h)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Hearing_aid(const Hearing_aid &h) [" << number_of_objects << "]" << endl;
+        cout << "Hearing_aid(const Hearing_aid) [" << number_of_objects << "]" << endl;
     #endif
 
     m_name=h.m_name;
@@ -95,9 +95,6 @@ Hearing_aid& Hearing_aid::operator=(Hearing_aid &h)
     m_number_of_parameters=h.m_number_of_parameters;
 
     setProduction_year(h.production_year());
-    //battery().setSize(h.battery().size());
-    //battery().setLifespan(h.battery().lifespan());
-    //battery()=h.battery();
     setBattery(h.battery());
     setUser(h.user());
 
@@ -129,7 +126,7 @@ bool Hearing_aid::operator==(const Hearing_aid &h)
         {
             int x=0;
             for(int i=0; i<m_number_of_parameters; i++)
-                if(parameters[i]==h.parameters[i])
+                if(*parameters[i]==*h.parameters[i])
                     x++;
             if(x==m_number_of_parameters)
                 return true;
@@ -253,7 +250,7 @@ void Hearing_aid::draw()
         cout << "draw() [H]" << endl;
     #endif
 
-    cout << "---HEARING_AID---" << endl;
+    cout << "-----------HEARING_AID-----------" << endl;
     Electronic_device *ctpr;
     ctpr=dynamic_cast<Electronic_device*>(this);
     cout << *ctpr;
@@ -274,7 +271,7 @@ void Hearing_aid::save()
         return;
     }
 
-    ofs << "---HEARING_AID---" << endl;
+    ofs << "-----------HEARING_AID-----------" << endl;
 
     Electronic_device *ctpr;
     ctpr=dynamic_cast<Electronic_device*>(this);
@@ -299,7 +296,7 @@ void Hearing_aid::open()
     }
     string temp;
     getline(ifs, temp);
-    while(temp!="---HEARING_AID---")
+    while(temp!="-----------HEARING_AID-----------")
     {
         getline(ifs, temp);
         if(temp=="")

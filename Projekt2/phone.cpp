@@ -12,7 +12,7 @@ Phone::Phone(string brand, const int processor, const bool dual_sim)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Phone(string brand, const int processor, const bool dual_sim) [" << number_of_objects << "]" << endl;
+        cout << "Phone(string, const int, const bool) [" << number_of_objects << "]" << endl;
     #endif
 
     m_brand=brand;
@@ -25,7 +25,7 @@ Phone::Phone(const Phone &p)
     number_of_objects++;
 
     #ifdef _DEBUG
-        cout << "Phone(const Phone &p) [" << number_of_objects << "]" << endl;
+        cout << "Phone(const Phone) [" << number_of_objects << "]" << endl;
     #endif
 
     setProduction_year(p.production_year());
@@ -147,7 +147,7 @@ void Phone::draw()
         cout << "draw() [P]" << endl;
     #endif
 
-    cout << "---PHONE---" << endl;
+    cout << "-----------PHONE-----------" << endl;
     Electronic_device *ctpr;
     ctpr=dynamic_cast<Electronic_device*>(this);
     cout << *ctpr;
@@ -168,7 +168,7 @@ void Phone::save()
         return;
     }
 
-    ofs << "---PHONE---" << endl;
+    ofs << "-----------PHONE-----------" << endl;
 
     Electronic_device *ctpr;
     ctpr=dynamic_cast<Electronic_device*>(this);
@@ -193,7 +193,7 @@ void Phone::open()
     }
     string temp;
     getline(ifs, temp);
-    while(temp!="---PHONE---")
+    while(temp!="-----------PHONE-----------")
     {
         getline(ifs, temp);
         if(temp=="")
