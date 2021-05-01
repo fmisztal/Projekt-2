@@ -8,12 +8,14 @@ public:
     Phone(const Phone &p);
     ~Phone();
 
-    static int phoneQuantity();
-
     Phone& operator=(const Phone &p);
     bool operator==(const Phone &p);
 
+    static int phoneQuantity();
     virtual void ownership();
+    virtual void draw();
+    virtual void save();
+    virtual void open();
 
     string brand() const;
     void setBrand(const string &brand);

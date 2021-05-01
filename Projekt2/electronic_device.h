@@ -13,8 +13,9 @@ public:
     void operator--();
 
     virtual void ownership()=0;
-    virtual void draw();
-    virtual void save();
+    virtual void draw()=0;
+    virtual void save()=0;
+    virtual void open()=0;
 
     User& user();
     void setUser(const User &user);
@@ -36,5 +37,7 @@ protected:
 };
 
 ostream& operator<<(ostream &ost, Electronic_device &e);
+ostream& operator<<=(ostream &ost, Electronic_device &e);
+istream& operator>>(istream &ist, Electronic_device &e);
 
 #endif // ELECTRONIC_DEVICE_H

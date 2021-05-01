@@ -92,6 +92,15 @@ void Battery::setLifespan(int lifespan)
     m_lifespan = lifespan;
 }
 
+istream& operator>>(istream &is, Battery &b)
+{
+    int size, lifespan;
+    char sign;
+    is >> size >> sign >> lifespan;
+    b.setSize(size);
+    b.setLifespan(lifespan);
+    return is;
+}
 
 
 

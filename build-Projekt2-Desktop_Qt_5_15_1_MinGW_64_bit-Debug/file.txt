@@ -1,11 +1,8 @@
----HEARING_AID---
-wdff
-3 , 1999
+---SMARTPHONE---
+1999
 12 , 5
 ADMIN
 12 , 123456789
-2
-cs
-897
-w222
-111
+Samsung
+1234 , 1
+1 , 2 , 3

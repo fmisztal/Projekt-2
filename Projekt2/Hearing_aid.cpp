@@ -144,13 +144,7 @@ void Hearing_aid::ownership()
 
 ostream& operator<<(ostream &os, Hearing_aid &h)
 {
-    #ifdef _DEBUG
-        cout << "operator<<[H]" << endl;
-    #endif
-
-    os << "-------------------------------------------------" << endl;
-    os  << "Name: " << h.name() << " , Amplification: " << h.amplification_x() << " , Production year: " << h.production_year() << endl;
-    os << h.battery();
+    os  << "Name: " << h.name() << " , Amplification: " << h.amplification_x() << endl;
     if(h.number_of_parameters()!=0)
     {
         os << "Number of parameters- " << h.number_of_parameters() << " : ";
@@ -162,63 +156,34 @@ ostream& operator<<(ostream &os, Hearing_aid &h)
         }
         os << endl;
     }
-    os << h.user();
-    os << "-------------------------------------------------" << endl;
     return os;
 };
 
 ostream& operator<<=(ostream &os, Hearing_aid &h)
 {
-    #ifdef _DEBUG
-        cout << "operator<<=" << endl;
-    #endif
-
-    os << "---HEARING_AID---" << endl;
     os << h.name() << endl;
-    os << h.amplification_x() << " , " << h.production_year() << endl;
-    os <<= h.battery();
+    os << h.amplification_x() << " , " << h.number_of_parameters() << endl;
     if(h.number_of_parameters()!=0)
-    {
-        os << h.number_of_parameters() << endl;
         for(int i=0; i<h.number_of_parameters(); i++)
             os <<= *(h.parameters[i]);
-    }
-    os <<= h.user();
     return os;
 }
 
 istream& operator>>(istream &is, Hearing_aid &h)
 {
-    #ifdef _DEBUG
-        cout << "operator>>" << endl;
-    #endif
-
     string temp, name, par_name, username;
     char sign;
-    int amplification, production_year, size , lifespan, number_of_parameters, par_value, age, pesel;
+    int amplification, number_of_parameters, par_value;
 
     getline(is, temp);
-    while(temp!="---HEARING_AID---")
-    {
-        getline(is, temp);
-        if(temp=="")
-        {
-            cout << "Couldn't find this kind of object in database" << endl;
-            return is;
-        }
-    }
     getline(is, name);
     h.setName(name);
-    is >> amplification >> sign >> production_year >> size >> sign >> lifespan >> number_of_parameters;
+    is >> amplification >> sign >> number_of_parameters;
     h.setAmplification_x(amplification);
-    h.setProduction_year(production_year);
-    h.battery().setSize(size);
-    h.battery().setLifespan(lifespan);
     h.setNumber_of_parameters(number_of_parameters);
 
-    getline(is, temp);
-
     h.deleteVector();
+    getline(is, temp);
 
     for(int i=0; i<number_of_parameters; i++)
     {
@@ -230,11 +195,6 @@ istream& operator>>(istream &is, Hearing_aid &h)
         temporary->setValue(par_value);
         h.parameters.push_back(temporary);
     }
-    getline(is, username);
-    is >> age >> sign >> pesel;
-    h.user().setName(username);
-    h.user().setAge(age);
-    h.user().setPesel(pesel);
 
     return is;
 }
@@ -247,21 +207,6 @@ Hearing_aid::operator string()
 
     return "Current sound amplification: " + to_string(m_amplification_x);
 };
-
-/*void Hearing_aid::operator[](int number)
-{
-    #ifdef _DEBUG
-        cout << "operator[]" << endl;
-    #endif
-
-    if(number>=m_number_of_parameters)
-    {
-        cout << "No such parameter" << endl;
-        return;
-    }
-    cout << m_parameter[number] << endl;
-    return;
-};*/
 
 string Hearing_aid::name() const
 {
@@ -305,49 +250,75 @@ void operator|=(double x, Hearing_aid &h)
 void Hearing_aid::draw()
 {
     #ifdef _DEBUG
-        cout << "draw [H]" << endl;
+        cout << "draw() [H]" << endl;
     #endif
 
-    Electronic_device::draw();
-
-    cout << "Name: " << name() << " , Amplification: " << amplification_x() << endl;
-    if(number_of_parameters()!=0)
-    {
-        cout << "Number of parameters- " << number_of_parameters() << " : ";
-        for(int i=0; i<number_of_parameters(); i++)
-        {
-            if(i!=0 && i<number_of_parameters())
-                cout << " , ";
-            cout << *(parameters[i]);
-        }
-        cout << endl;
-    }
+    cout << "---HEARING_AID---" << endl;
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    cout << *ctpr;
+    cout << *this;
 }
 
 void Hearing_aid::save()
-{
+{ 
+    #ifdef _DEBUG
+        cout << "save() [H]" << endl;
+    #endif
+
     ofstream ofs;
     ofs.open("file.txt", ios_base::out);
+    if(!ofs.good())
+    {
+        cout << "Couldn't open the database" << endl;
+        return;
+    }
 
     ofs << "---HEARING_AID---" << endl;
-    ofs << name() << endl;
-    ofs << amplification_x() << " , ";
 
-    ofs.close();
-
-    Electronic_device::save();
-
-    ofs.open("file.txt", ios_base::app);
-
-    if(number_of_parameters()!=0)
-    {
-        ofs << number_of_parameters() << endl;
-        for(int i=0; i<number_of_parameters(); i++)
-            ofs <<= *(parameters[i]);
-    }
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    ofs <<= *ctpr;
+    ofs <<= *this;
 
     ofs.close();
 }
+
+void Hearing_aid::open()
+{
+    #ifdef _DEBUG
+        cout << "open() [H]" << endl;
+    #endif
+
+    ifstream ifs;
+    ifs.open("file.txt", ios_base::in);
+    if(!ifs.good())
+    {
+        cout << "Couldn't open the database" << endl;
+        return;
+    }
+    string temp;
+    getline(ifs, temp);
+    while(temp!="---HEARING_AID---")
+    {
+        getline(ifs, temp);
+        if(temp=="")
+        {
+            cout << "Couldn't find this kind of object in database" << endl;
+            return;
+        }
+    }
+
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    ifs >> *ctpr;
+    ifs >> *this;
+
+    ifs.close();
+}
+
+
+
 
 
 

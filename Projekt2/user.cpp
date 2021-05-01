@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+#include <fstream>
+#include <cstring>
 #include "battery.h"
 #include "user.h"
 
@@ -99,7 +102,18 @@ ostream& operator<<=(ostream &s, User &u)
     return s << u.name() << endl << u.age() << " , " << u.pesel() << endl;
 }
 
-
+istream& operator>>(istream &is, User &u)
+{
+    string name;
+    int pesel, age;
+    char sign;
+    getline(is, name);
+    is >> age >> sign >> pesel;
+    u.setName(name);
+    u.setAge(age);
+    u.setPesel(pesel);
+    return is;
+}
 
 
 

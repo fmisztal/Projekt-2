@@ -11,7 +11,11 @@ public:
     Smartphone& operator=(const Smartphone &s);
     bool operator==(const Smartphone &s);
 
+    static int smartphoneQuantity();
     virtual void ownership();
+    virtual void draw();
+    virtual void save();
+    virtual void open();
 
     int inches() const;
     void setInches(int inches);

@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+#include <fstream>
+#include <cstring>
 #include "phone.h"
 #include "electronic_device.h"
 
@@ -112,56 +115,25 @@ void Phone::setDual_sim(bool dual_sim)
 
 ostream& operator<<(ostream &ost, Phone &p)
 {
-    ost << "-------------------------------------------------" << endl;
-    ost << "Phone: brand- " << p.brand() << " , processor- " << p.processor() << " , dual sim- " << p.dual_sim() << endl;
-    ost << p.production_year() << endl << p.battery() << p.user();
-    return ost << "-------------------------------------------------" << endl;
+    return ost << "Brand- " << p.brand() << " , processor- " << p.processor() << " , dual sim- " << p.dual_sim() << endl;
 };
 
 ostream& operator<<=(ostream &ost, Phone &p)
 {
-    ost << "---PHONE---" << endl;
-    ost << p.brand() << endl << p.processor() << " , " << p.dual_sim() << endl << p.production_year() << endl;
-    ost <<= p.battery();
-    ost <<= p.user();
-
-    return ost;
+    ost << p.brand() << endl;
+    return ost << p.processor() << " , " << p.dual_sim() << endl;;
 }
 
 istream& operator>>(istream &is, Phone &p)
 {
-    #ifdef _DEBUG
-        cout << "operator>>" << endl;
-    #endif
-
-    string temp, brand, username;
+    string temp, brand;
     char sign;
     bool dual_sim;
-    int processor, production_year, size , lifespan, age, pesel;
+    int processor;
 
     getline(is, temp);
-    while(temp!="---PHONE---")
-    {
-        getline(is, temp);
-        if(temp=="")
-        {
-            cout << "Couldn't find this kind of object in database" << endl;
-            return is;
-        }
-    }
     getline(is, brand);
-    is >> processor >> sign >> dual_sim >> production_year >> size >> sign >> lifespan;
-    getline(is, temp);
-    getline(is, username);
-    is >> age >> sign >> pesel;
-
-    p.setProduction_year(production_year);
-    p.battery().setSize(size);
-    p.battery().setLifespan(lifespan);
-    p.user().setName(username);
-    p.user().setAge(age);
-    p.user().setPesel(pesel);
-
+    is >> processor >> sign >> dual_sim;
     p.setBrand(brand);
     p.setDual_sim(dual_sim);
     p.setProcessor(processor);
@@ -169,7 +141,75 @@ istream& operator>>(istream &is, Phone &p)
     return is;
 }
 
+void Phone::draw()
+{
+    #ifdef _DEBUG
+        cout << "draw() [P]" << endl;
+    #endif
 
+    cout << "---PHONE---" << endl;
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    cout << *ctpr;
+    cout << *this;
+}
+
+void Phone::save()
+{
+    #ifdef _DEBUG
+        cout << "save() [P]" << endl;
+    #endif
+
+    ofstream ofs;
+    ofs.open("file.txt", ios_base::out);
+    if(!ofs.good())
+    {
+        cout << "Couldn't open the database" << endl;
+        return;
+    }
+
+    ofs << "---PHONE---" << endl;
+
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    ofs <<= *ctpr;
+    ofs <<= *this;
+
+    ofs.close();
+}
+
+void Phone::open()
+{
+    #ifdef _DEBUG
+        cout << "open() [P]" << endl;
+    #endif
+
+    ifstream ifs;
+    ifs.open("file.txt", ios_base::in);
+    if(!ifs.good())
+    {
+        cout << "Couldn't open the database" << endl;
+        return;
+    }
+    string temp;
+    getline(ifs, temp);
+    while(temp!="---PHONE---")
+    {
+        getline(ifs, temp);
+        if(temp=="")
+        {
+            cout << "Couldn't find this kind of object in database" << endl;
+            return;
+        }
+    }
+
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    ifs >> *ctpr;
+    ifs >> *this;
+
+    ifs.close();
+}
 
 
 

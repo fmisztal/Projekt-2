@@ -29,5 +29,6 @@ protected:
 
 ostream& operator<<(ostream &ost, Battery &b);
 ostream& operator<<=(ostream &ost, Battery &b);
+istream& operator>>(istream &is, Battery &b);
 
 #endif // BATTERY_H

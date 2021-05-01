@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+#include <fstream>
+#include <cstring>
 #include "smartphone.h"
 #include "phone.h"
 #include "electronic_device.h"
@@ -53,6 +56,11 @@ Smartphone::~Smartphone()
     #ifdef _DEBUG
         cout << "~Smartphone() [" << number_of_objects << "]" << endl;
     #endif
+}
+
+int Smartphone::smartphoneQuantity()
+{
+    return number_of_objects;
 }
 
 Smartphone& Smartphone::operator=(const Smartphone &s)
@@ -117,23 +125,13 @@ void Smartphone::setMegapiksels(int megapiksels)
 }
 
 ostream& operator<<(ostream &ost, Smartphone &s)
-{ 
-    ost << "-------------------------------------------------" << endl;
-    ost << "Smartphone: brand- " << s.brand() << " , processor- " << s.processor() << " , dual sim- " << s.dual_sim() << endl;
-    ost << "Inches- " << s.inches() << " , weight= " << s.weight() << " , megapiksels- " << s.megapiksels() << endl;
-    ost << s.production_year() << endl << s.battery() << s.user();
-    return ost << "-------------------------------------------------" << endl;
+{
+    return ost << "Inches- " << s.inches() << " , weight- " << s.weight() << " , megapiksels- " << s.megapiksels() << endl;
 }
 
 ostream& operator<<=(ostream &ost, Smartphone &s)
 {
-    ost << "---SMARTPHONE---" << endl;
-    ost << s.brand() << endl << s.processor() << " , " << s.dual_sim() << endl << s.production_year() << endl;
-    ost << s.inches() << " , " << s.weight() << " , " << s.megapiksels() << endl;
-    ost <<= s.battery();
-    ost <<= s.user();
-
-    return ost;
+    return ost << s.inches() << " , " << s.weight() << " , " << s.megapiksels() << endl;
 }
 
 istream& operator>>(istream &is, Smartphone &s)
@@ -142,38 +140,12 @@ istream& operator>>(istream &is, Smartphone &s)
         cout << "operator>>" << endl;
     #endif
 
-    string temp, brand, username;
+    string temp;
     char sign;
-    bool dual_sim;
-    int processor, production_year, size , lifespan, age, pesel, inches, weight, megapiksels;
+    int inches, weight, megapiksels;
 
-    getline(is, temp);
-    while(temp!="---SMARTPHONE---")
-    {
-        getline(is, temp);
-        if(temp=="")
-        {
-            cout << "Couldn't find this kind of object in database" << endl;
-            return is;
-        }
-    }
-    getline(is, brand);
-    is >> processor >> sign >> dual_sim >> production_year;
-    is >> inches >> sign >> weight >> sign >> megapiksels >> size >> sign >> lifespan;
-    getline(is, temp);
-    getline(is, username);
-    is >> age >> sign >> pesel;
+    is >> inches >> sign >> weight >> sign >> megapiksels;
 
-    s.setProduction_year(production_year);
-    s.battery().setSize(size);
-    s.battery().setLifespan(lifespan);
-    s.user().setName(username);
-    s.user().setAge(age);
-    s.user().setPesel(pesel);
-
-    s.setBrand(brand);
-    s.setDual_sim(dual_sim);
-    s.setProcessor(processor);
     s.setInches(inches);
     s.setMegapiksels(megapiksels);
     s.setWeight(weight);
@@ -181,7 +153,84 @@ istream& operator>>(istream &is, Smartphone &s)
     return is;
 }
 
+void Smartphone::draw()
+{
+    #ifdef _DEBUG
+        cout << "draw() [S]" << endl;
+    #endif
 
+    cout << "---SMARTPHONE---" << endl;
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    cout << *ctpr;
+    Phone *ctpr1;
+    ctpr1=dynamic_cast<Phone*>(this);
+    cout << *ctpr1;
+    cout << *this;
+}
+
+void Smartphone::save()
+{
+    #ifdef _DEBUG
+        cout << "save() [S]" << endl;
+    #endif
+
+    ofstream ofs;
+    ofs.open("file.txt", ios_base::out);
+    if(!ofs.good())
+    {
+        cout << "Couldn't open the database" << endl;
+        return;
+    }
+
+    ofs << "---SMARTPHONE---" << endl;
+
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    ofs <<= *ctpr;
+    Phone *ctpr1;
+    ctpr1=dynamic_cast<Phone*>(this);
+    ofs <<= *ctpr1;
+    ofs <<= *this;
+
+    ofs.close();
+}
+
+void Smartphone::open()
+{
+    #ifdef _DEBUG
+        cout << "open() [S]" << endl;
+    #endif
+
+    ifstream ifs;
+    ifs.open("file.txt", ios_base::in);
+    if(!ifs.good())
+    {
+        cout << "Couldn't open the database" << endl;
+        return;
+    }
+    string temp;
+    getline(ifs, temp);
+    while(temp!="---SMARTPHONE---")
+    {
+        getline(ifs, temp);
+        if(temp=="")
+        {
+            cout << "Couldn't find this kind of object in database" << endl;
+            return;
+        }
+    }
+
+    Electronic_device *ctpr;
+    ctpr=dynamic_cast<Electronic_device*>(this);
+    ifs >> *ctpr;
+    Phone *ctpr1;
+    ctpr1=dynamic_cast<Phone*>(this);
+    ifs >> *ctpr1;
+    ifs >> *this;
+
+    ifs.close();
+}
 
 
 

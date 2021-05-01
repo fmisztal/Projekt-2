@@ -33,5 +33,6 @@ protected:
 
 ostream& operator<<(ostream &s, User &u);
 ostream& operator<<=(ostream &s, User &u);
+istream& operator>>(istream &is, User &u);
 
 #endif // USER_H

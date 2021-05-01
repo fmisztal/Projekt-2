@@ -87,7 +87,7 @@ void Electronic_device::operator--()
     m_battery.setLifespan(x);
 }
 
-void Electronic_device::draw()
+/*void Electronic_device::draw()
 {
     #ifdef _DEBUG
         cout << "draw [E]" << endl;
@@ -109,10 +109,41 @@ void Electronic_device::save()
     ofs.close();
 }
 
+void Electronic_device::open()
+{
+    ifstream ifs;
+    ifs.open("file.txt", ios_base::in);
 
+    string temp;
+    ifs >> m_battery;
+    getline(ifs, temp);
+    ifs >> m_user;
+    ifs.close();
+}*/
 
+istream &operator>>(istream &is, Electronic_device &e)
+{
+    string temp;
+    int year;
+    is >> year >> e.battery();
+    e.setProduction_year(year);
+    getline(is, temp);
+    is >> e.user();
+    return is;
+}
 
+ostream& operator<<(ostream &ost, Electronic_device &e)
+{
+    ost << "Production year: " << e.production_year() << endl;
+    return ost << e.battery() << e.user();
+}
 
+ostream& operator<<=(ostream &ost, Electronic_device &e)
+{
+    ost << e.production_year() << endl;
+    ost <<= e.battery();
+    return ost <<= e.user();
+}
 
 
 

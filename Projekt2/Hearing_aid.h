@@ -18,10 +18,10 @@ public:
     virtual void ownership();
     virtual void draw();
     virtual void save();
+    virtual void open();
 
     Hearing_aid& operator=(Hearing_aid &h);
     bool operator==(const Hearing_aid &h);
-    //void operator[](int number);
     operator string();
 
     string name() const;

@@ -12,102 +12,49 @@ vector<Electronic_device*> electronic_devices;
 
 int main()
 {
-    cout <<  endl;
+    /*Hearing_aid a("ABCDE",3,2);
+    a.parameters[0]->setName("Par1");
+    a.parameters[0]->setValue(111);
+    a.parameters[1]->setName("Par2");
+    a.parameters[1]->setValue(222);*/
 
-    Hearing_aid a("wdff",3,2);
+    //Phone a("Samsung", 1234, true);
+
+    Smartphone a(1, 2, 3, "Samsung", 1234, true);
+
     a.setProduction_year(1999);
+    a.user().setName("ADMIN");
+    a.user().setAge(18);
+    a.user().setPesel(123456789);
     a.battery().setSize(12);
     a.battery().setLifespan(5);
-    a.parameters[0]->setName("cs");
-    a.parameters[0]->setValue(897);
-    a.parameters[1]->setName("w222");
-    a.parameters[1]->setValue(111);
-    a.user().setName("ADMIN");
-    a.user().setAge(12);
-    a.user().setPesel(123456789);
 
-    cout <<  endl;
-
-    Hearing_aid b;
-    b=a;
-
-    cout <<  endl;
-
-    //cout << a << endl << b << endl;
-
-    /*a.parameters[0]->setName("erdsfdsff");
-    a.parameters[0]->setValue(420);
-    a.parameters[1]->setName("xxxxx");
-    a.parameters[1]->setValue(2137);
-
-    a.battery().setSize(99999999);
-    a.battery().setLifespan(999999999);*/
-
-    //cout << a << endl << b << endl;
-
-    cout << endl;
-
-    Hearing_aid c("egre",999,4);
-
-    //cout << "......" << endl;
+    //Hearing_aid b=a;
+    //Phone b;
+    Smartphone b=a;
+    Smartphone c;
+    c=a;
 
     electronic_devices.push_back(&a);
     electronic_devices.push_back(&b);
     electronic_devices.push_back(&c);
 
-    //cout << "......" << endl;
-
-    //cout << b << endl << endl;
-
-    a.ownership();
-
-    /*ofstream ofs;
-    ofs.open("file.txt", ios_base::out);
-    ofs <<= b;
-    //ofs <<= a;
-    ofs.close();
-
-    ifstream ifs;
-    ifs.open("file.txt", ios_base::in);
-    ifs >> c;
-    ifs.close();
-
-    cout << endl << endl << c << endl << endl;*/
-
-
-
-    /*Smartphone a(1, 2, 3, "Samsung", 1234, true);
-    //Phone a("Samsung", 1234, true);
-    Smartphone c;
-    a.setProduction_year(1999);
-    a.user().setName("ADMIN");
-    a.user().setAge(12);
-    a.user().setPesel(123456789);
-    a.battery().setSize(12);
-    a.battery().setLifespan(5);
-
-    ofstream ofs;
-    ofs.open("file.txt", ios_base::out);
-    ofs <<= a;
-    ofs.close();
-
-    ifstream ifs;
-    ifs.open("file.txt", ios_base::in);
-    ifs >> c;
-    ifs.close();
-
-    cout << endl << endl << c << endl << endl;
-
-    //cout << a << endl;
-
-    cout << endl << endl;*/
-
-    //cout << endl << endl << " .  " << endl << endl;
-    //electronic_devices[1]->draw();
-    //cout << endl << endl << " .  " << endl << endl;
-
+    /*cout << endl;
+    electronic_devices[0]->ownership();
+    cout << endl;
     electronic_devices[0]->save();
+    cout << endl;
+    electronic_devices[1]->open();
+    cout << endl;
+    electronic_devices[1]->draw();
+    cout << endl;*/
 
+    cout << endl;
+    electronic_devices[0]->draw();
+    cout << endl;
+    electronic_devices[1]->draw();
+    cout << endl;
+    electronic_devices[2]->draw();
     return 0;
 }
 
