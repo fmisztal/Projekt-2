@@ -1,0 +1,80 @@
+\doxysection{Projekt2/battery.h File Reference}
+\label{battery_8h}\index{Projekt2/battery.h@{Projekt2/battery.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Battery}
+\begin{DoxyCompactList}\small\item\em Podobiekt klasy \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \textbf{ operator$<$$<$} (ostream \&ost, \textbf{ Battery} \&b)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$. \end{DoxyCompactList}\item 
+ostream \& \textbf{ operator$<$$<$=} (ostream \&ost, \textbf{ Battery} \&b)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$=. \end{DoxyCompactList}\item 
+istream \& \textbf{ operator$>$$>$} (istream \&is, \textbf{ Battery} \&b)
+\begin{DoxyCompactList}\small\item\em Operator $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{battery_8h_a9243c0d0f71a5db6579956b0055ab6a7}} 
+\index{battery.h@{battery.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!battery.h@{battery.h}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{ost,  }\item[{\textbf{ Battery} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$. 
+
+Operator wypisujący pola obiektu na strumień 
+\begin{DoxyParams}{Parameters}
+{\em \&b} & wypisywany obiekt \\
+\hline
+{\em \&ost} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{battery_8h_afb229bc88d17a501e141f10c9ae5d06a}} 
+\index{battery.h@{battery.h}!operator$<$$<$=@{operator$<$$<$=}}
+\index{operator$<$$<$=@{operator$<$$<$=}!battery.h@{battery.h}}
+\doxysubsubsection{operator$<$$<$=()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$= (\begin{DoxyParamCaption}\item[{ostream \&}]{ost,  }\item[{\textbf{ Battery} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$=. 
+
+Operator wypisujący pola obiektu do bazy danych 
+\begin{DoxyParams}{Parameters}
+{\em \&b} & zapisywany obiekt \\
+\hline
+{\em \&ost} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{battery_8h_a76abe001edff23c6387727b372bbd114}} 
+\index{battery.h@{battery.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!battery.h@{battery.h}}
+\doxysubsubsection{operator$>$$>$()}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\textbf{ Battery} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Operator $>$$>$ 
+
+Operator przypisuje polom danego obiektu wartości ze strumienia 
+\begin{DoxyParams}{Parameters}
+{\em \&b} & opisywany obiekt \\
+\hline
+{\em \&is} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}

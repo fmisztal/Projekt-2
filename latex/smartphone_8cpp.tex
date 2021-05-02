@@ -1,0 +1,80 @@
+\doxysection{Projekt2/smartphone.cpp File Reference}
+\label{smartphone_8cpp}\index{Projekt2/smartphone.cpp@{Projekt2/smartphone.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}smartphone.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}phone.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}electronic\+\_\+device.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \textbf{ operator$<$$<$} (ostream \&ost, \textbf{ Smartphone} \&s)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$. \end{DoxyCompactList}\item 
+ostream \& \textbf{ operator$<$$<$=} (ostream \&ost, \textbf{ Smartphone} \&s)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$=. \end{DoxyCompactList}\item 
+istream \& \textbf{ operator$>$$>$} (istream \&is, \textbf{ Smartphone} \&s)
+\begin{DoxyCompactList}\small\item\em Operator $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{smartphone_8cpp_ad3b02874fce33219d3a70339efb0cd75}} 
+\index{smartphone.cpp@{smartphone.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!smartphone.cpp@{smartphone.cpp}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{ost,  }\item[{\textbf{ Smartphone} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$. 
+
+Operator wypisujący pola obiektu na strumień 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & wypisywany obiekt \\
+\hline
+{\em \&ost} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{smartphone_8cpp_a4d817b54ef7f029ab264c7fff2179a43}} 
+\index{smartphone.cpp@{smartphone.cpp}!operator$<$$<$=@{operator$<$$<$=}}
+\index{operator$<$$<$=@{operator$<$$<$=}!smartphone.cpp@{smartphone.cpp}}
+\doxysubsubsection{operator$<$$<$=()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$= (\begin{DoxyParamCaption}\item[{ostream \&}]{ost,  }\item[{\textbf{ Smartphone} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$=. 
+
+Operator wypisujący pola obiektu do bazy danych 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & zapisywany obiekt \\
+\hline
+{\em \&ost} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{smartphone_8cpp_ad272c8591ba5264e7b26050ee1624f48}} 
+\index{smartphone.cpp@{smartphone.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!smartphone.cpp@{smartphone.cpp}}
+\doxysubsubsection{operator$>$$>$()}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\textbf{ Smartphone} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Operator $>$$>$ 
+
+Operator przypisuje polom danego obiektu wartości ze strumienia 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & opisywany obiekt \\
+\hline
+{\em \&is} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}

@@ -1,0 +1,376 @@
+\doxysection{Phone Class Reference}
+\label{class_phone}\index{Phone@{Phone}}
+
+
+Klasa \doxyref{Phone}{p.}{class_phone} dziedzicząca po klasie \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}.  
+
+
+
+
+{\ttfamily \#include $<$phone.\+h$>$}
+
+Inheritance diagram for Phone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_phone}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Phone} (string \textbf{ brand}=\char`\"{}\char`\"{}, const int \textbf{ processor}=0, const bool \textbf{ dual\+\_\+sim}=false)
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny z parametrami domyślnym. \end{DoxyCompactList}\item 
+\textbf{ Phone} (const \textbf{ Phone} \&p)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Phone} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxyref{Phone}{p.}{class_phone}. \end{DoxyCompactList}\item 
+\textbf{ Phone} \& \textbf{ operator=} (const \textbf{ Phone} \&p)
+\begin{DoxyCompactList}\small\item\em Operator =. \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ Phone} \&p)
+\begin{DoxyCompactList}\small\item\em Operator ==. \end{DoxyCompactList}\item 
+virtual void \textbf{ ownership} ()
+\begin{DoxyCompactList}\small\item\em Wypisanie danych właściciela obiektu \doxyref{Phone}{p.}{class_phone}. \end{DoxyCompactList}\item 
+virtual void \textbf{ draw} ()
+\begin{DoxyCompactList}\small\item\em Wypisanie obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ save} ()
+\begin{DoxyCompactList}\small\item\em Zapisywanie obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ open} ()
+\begin{DoxyCompactList}\small\item\em Odczytywanie obiektu. \end{DoxyCompactList}\item 
+string \textbf{ brand} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie nazwy marki. \end{DoxyCompactList}\item 
+void \textbf{ set\+Brand} (const string \&\textbf{ brand})
+\begin{DoxyCompactList}\small\item\em Ustawianie marki. \end{DoxyCompactList}\item 
+int \textbf{ processor} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie wartości procesora. \end{DoxyCompactList}\item 
+void \textbf{ set\+Processor} (int \textbf{ processor})
+\begin{DoxyCompactList}\small\item\em Ustawianie wartości procesora. \end{DoxyCompactList}\item 
+bool \textbf{ dual\+\_\+sim} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie stanu dual sim. \end{DoxyCompactList}\item 
+void \textbf{ set\+Dual\+\_\+sim} (bool \textbf{ dual\+\_\+sim})
+\begin{DoxyCompactList}\small\item\em Ustawianie stanu dual sim. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ phone\+Quantity} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości obiektów typu \doxyref{Phone}{p.}{class_phone}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ m\+\_\+brand}
+\begin{DoxyCompactList}\small\item\em marka \end{DoxyCompactList}\item 
+int \textbf{ m\+\_\+processor}
+\begin{DoxyCompactList}\small\item\em procesor \end{DoxyCompactList}\item 
+bool \textbf{ m\+\_\+dual\+\_\+sim}
+\begin{DoxyCompactList}\small\item\em czy posiada dual sim \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ number\+\_\+of\+\_\+objects} =0
+\begin{DoxyCompactList}\small\item\em ilość obiektów typu \doxyref{Phone}{p.}{class_phone} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \doxyref{Phone}{p.}{class_phone} dziedzicząca po klasie \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_phone_a2874f9d35b77d081c29aecff7ebb39d0}} 
+\index{Phone@{Phone}!Phone@{Phone}}
+\index{Phone@{Phone}!Phone@{Phone}}
+\doxysubsubsection{Phone()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Phone\+::\+Phone (\begin{DoxyParamCaption}\item[{string}]{brand = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const int}]{processor = {\ttfamily 0},  }\item[{const bool}]{dual\+\_\+sim = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny z parametrami domyślnym. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em brand=\char`\"{}\char`\"{}} & marka \\
+\hline
+{\em processor=0} & procesor \\
+\hline
+{\em dual\+\_\+sim=false} & czy posiada dual sim \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_phone_ab16e749af0d8a67a61e8a65e13013dd1}} 
+\index{Phone@{Phone}!Phone@{Phone}}
+\index{Phone@{Phone}!Phone@{Phone}}
+\doxysubsubsection{Phone()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Phone\+::\+Phone (\begin{DoxyParamCaption}\item[{const \textbf{ Phone} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&p} & kopiowany obiekt \doxyref{Phone}{p.}{class_phone} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_phone_a91183e7943f6c43ea32f2aead56ee8ab}} 
+\index{Phone@{Phone}!````~Phone@{$\sim$Phone}}
+\index{````~Phone@{$\sim$Phone}!Phone@{Phone}}
+\doxysubsubsection{$\sim$Phone()}
+{\footnotesize\ttfamily Phone\+::$\sim$\+Phone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxyref{Phone}{p.}{class_phone}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_phone_a3d5fbd30f960d7684bba116bca3e7c82}} 
+\index{Phone@{Phone}!brand@{brand}}
+\index{brand@{brand}!Phone@{Phone}}
+\doxysubsubsection{brand()}
+{\footnotesize\ttfamily string Phone\+::brand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie nazwy marki. 
+
+\begin{DoxyReturn}{Returns}
+zwraca markę obiektu 
+\end{DoxyReturn}
+\mbox{\label{class_phone_a702c9cbd7433dd04893ad3c510403352}} 
+\index{Phone@{Phone}!draw@{draw}}
+\index{draw@{draw}!Phone@{Phone}}
+\doxysubsubsection{draw()}
+{\footnotesize\ttfamily void Phone\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Wypisanie obiektu. 
+
+Metoda wirtualna wypisująca obiekt \doxyref{Phone}{p.}{class_phone} 
+
+Implements \textbf{ Electronic\+\_\+device} \doxyref{}{p.}{class_electronic__device_a79a469270f4dfb1f0863d9db702c1078}.
+
+
+
+Reimplemented in \textbf{ Smartphone} \doxyref{}{p.}{class_smartphone_a3c7a7bcb8aa572077116bcb8fd1418f0}.
+
+\mbox{\label{class_phone_a1bd05d33c3eab9672953e58c12749d8c}} 
+\index{Phone@{Phone}!dual\_sim@{dual\_sim}}
+\index{dual\_sim@{dual\_sim}!Phone@{Phone}}
+\doxysubsubsection{dual\_sim()}
+{\footnotesize\ttfamily bool Phone\+::dual\+\_\+sim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie stanu dual sim. 
+
+\begin{DoxyReturn}{Returns}
+zwraca informację czy obiekt posiada dual sim 
+\end{DoxyReturn}
+\mbox{\label{class_phone_ae8bd057db6c87d435686faddec62f04f}} 
+\index{Phone@{Phone}!open@{open}}
+\index{open@{open}!Phone@{Phone}}
+\doxysubsubsection{open()}
+{\footnotesize\ttfamily void Phone\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Odczytywanie obiektu. 
+
+Metoda wirtualna odczytująca wartości obiektu \doxyref{Phone}{p.}{class_phone} z bazy danych 
+
+Implements \textbf{ Electronic\+\_\+device} \doxyref{}{p.}{class_electronic__device_aa6d22ee483852a791d6c6829cbb35b56}.
+
+
+
+Reimplemented in \textbf{ Smartphone} \doxyref{}{p.}{class_smartphone_a876bd3c9e72ae20b561cdcfe64bd9af1}.
+
+\mbox{\label{class_phone_a3020e0470a95c2702243015d3240e4f9}} 
+\index{Phone@{Phone}!operator=@{operator=}}
+\index{operator=@{operator=}!Phone@{Phone}}
+\doxysubsubsection{operator=()}
+{\footnotesize\ttfamily \textbf{ Phone} \& Phone\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Phone} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operator =. 
+
+Operator kopiuje drugi obiekt typu \doxyref{Phone}{p.}{class_phone} 
+\begin{DoxyParams}{Parameters}
+{\em \&p} & obiekt kopiowany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca kopię obiektu p 
+\end{DoxyReturn}
+\mbox{\label{class_phone_a14f20e258151b81c606618f3198a4dd1}} 
+\index{Phone@{Phone}!operator==@{operator==}}
+\index{operator==@{operator==}!Phone@{Phone}}
+\doxysubsubsection{operator==()}
+{\footnotesize\ttfamily bool Phone\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Phone} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operator ==. 
+
+Operator porównujący ze sobą dwa obiekty typu \doxyref{Phone}{p.}{class_phone} 
+\begin{DoxyParams}{Parameters}
+{\em \&p} & obiekt porównywany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca true lub false 
+\end{DoxyReturn}
+\mbox{\label{class_phone_afee940e1f53f6e649a4c02252ebf03c0}} 
+\index{Phone@{Phone}!ownership@{ownership}}
+\index{ownership@{ownership}!Phone@{Phone}}
+\doxysubsubsection{ownership()}
+{\footnotesize\ttfamily void Phone\+::ownership (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Wypisanie danych właściciela obiektu \doxyref{Phone}{p.}{class_phone}. 
+
+Metoda wirtualna wypisująca dane urzytkownika obiektu \doxyref{Phone}{p.}{class_phone} 
+
+Implements \textbf{ Electronic\+\_\+device} \doxyref{}{p.}{class_electronic__device_a2658a9d508ac6a354b86b27672d9f6cc}.
+
+
+
+Reimplemented in \textbf{ Smartphone} \doxyref{}{p.}{class_smartphone_acc99907dd973908dd35911fe1b6d76f1}.
+
+\mbox{\label{class_phone_a50bb099671338fab676fdc21782f981d}} 
+\index{Phone@{Phone}!phoneQuantity@{phoneQuantity}}
+\index{phoneQuantity@{phoneQuantity}!Phone@{Phone}}
+\doxysubsubsection{phoneQuantity()}
+{\footnotesize\ttfamily int Phone\+::phone\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobieranie ilości obiektów typu \doxyref{Phone}{p.}{class_phone}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość obiektów 
+\end{DoxyReturn}
+\mbox{\label{class_phone_af7b930f832dec678af2c0b6d37ef2b42}} 
+\index{Phone@{Phone}!processor@{processor}}
+\index{processor@{processor}!Phone@{Phone}}
+\doxysubsubsection{processor()}
+{\footnotesize\ttfamily int Phone\+::processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie wartości procesora. 
+
+\begin{DoxyReturn}{Returns}
+zwraca wartość procesora obiektu 
+\end{DoxyReturn}
+\mbox{\label{class_phone_ada358d103731038ed63bca396adde49a}} 
+\index{Phone@{Phone}!save@{save}}
+\index{save@{save}!Phone@{Phone}}
+\doxysubsubsection{save()}
+{\footnotesize\ttfamily void Phone\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Zapisywanie obiektu. 
+
+Metoda wirtualna zapisująca obiekt \doxyref{Phone}{p.}{class_phone} w bazie danych 
+
+Implements \textbf{ Electronic\+\_\+device} \doxyref{}{p.}{class_electronic__device_a7adb9bfea1f37e46c354a42abc1016ba}.
+
+
+
+Reimplemented in \textbf{ Smartphone} \doxyref{}{p.}{class_smartphone_a858da17e0c8c219f4a2a0f5ff3f081f5}.
+
+\mbox{\label{class_phone_af8ead284e2eec5a0a431c35d0a791c14}} 
+\index{Phone@{Phone}!setBrand@{setBrand}}
+\index{setBrand@{setBrand}!Phone@{Phone}}
+\doxysubsubsection{setBrand()}
+{\footnotesize\ttfamily void Phone\+::set\+Brand (\begin{DoxyParamCaption}\item[{const string \&}]{brand }\end{DoxyParamCaption})}
+
+
+
+Ustawianie marki. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&brand} & marka obiektu \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_phone_ac6b55b7fcda99f92c2f3bacbab67c0ad}} 
+\index{Phone@{Phone}!setDual\_sim@{setDual\_sim}}
+\index{setDual\_sim@{setDual\_sim}!Phone@{Phone}}
+\doxysubsubsection{setDual\_sim()}
+{\footnotesize\ttfamily void Phone\+::set\+Dual\+\_\+sim (\begin{DoxyParamCaption}\item[{bool}]{dual\+\_\+sim }\end{DoxyParamCaption})}
+
+
+
+Ustawianie stanu dual sim. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dual\+\_\+sim} & stan dual sim \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_phone_a350143cc82cc54332402235ef26bc72f}} 
+\index{Phone@{Phone}!setProcessor@{setProcessor}}
+\index{setProcessor@{setProcessor}!Phone@{Phone}}
+\doxysubsubsection{setProcessor()}
+{\footnotesize\ttfamily void Phone\+::set\+Processor (\begin{DoxyParamCaption}\item[{int}]{processor }\end{DoxyParamCaption})}
+
+
+
+Ustawianie wartości procesora. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor} & wartość procesora \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_phone_adff2e0ac959f1f7f9dc06e3021a38331}} 
+\index{Phone@{Phone}!m\_brand@{m\_brand}}
+\index{m\_brand@{m\_brand}!Phone@{Phone}}
+\doxysubsubsection{m\_brand}
+{\footnotesize\ttfamily string Phone\+::m\+\_\+brand\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+marka 
+
+\mbox{\label{class_phone_a4d3a77c323cff4922a2ca8f7f32df92f}} 
+\index{Phone@{Phone}!m\_dual\_sim@{m\_dual\_sim}}
+\index{m\_dual\_sim@{m\_dual\_sim}!Phone@{Phone}}
+\doxysubsubsection{m\_dual\_sim}
+{\footnotesize\ttfamily bool Phone\+::m\+\_\+dual\+\_\+sim\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+czy posiada dual sim 
+
+\mbox{\label{class_phone_a01948d1b16da8a4f8f758d0773c91759}} 
+\index{Phone@{Phone}!m\_processor@{m\_processor}}
+\index{m\_processor@{m\_processor}!Phone@{Phone}}
+\doxysubsubsection{m\_processor}
+{\footnotesize\ttfamily int Phone\+::m\+\_\+processor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+procesor 
+
+\mbox{\label{class_phone_a64c784fbe3287b9064057651c796a623}} 
+\index{Phone@{Phone}!number\_of\_objects@{number\_of\_objects}}
+\index{number\_of\_objects@{number\_of\_objects}!Phone@{Phone}}
+\doxysubsubsection{number\_of\_objects}
+{\footnotesize\ttfamily int Phone\+::number\+\_\+of\+\_\+objects =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+ilość obiektów typu \doxyref{Phone}{p.}{class_phone} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projekt2/\textbf{ phone.\+h}\item 
+Projekt2/\textbf{ phone.\+cpp}\end{DoxyCompactItemize}

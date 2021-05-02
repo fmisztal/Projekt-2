@@ -1,0 +1,79 @@
+\doxysection{Projekt2/phone.cpp File Reference}
+\label{phone_8cpp}\index{Projekt2/phone.cpp@{Projekt2/phone.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}phone.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}electronic\+\_\+device.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \textbf{ operator$<$$<$} (ostream \&ost, \textbf{ Phone} \&p)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$. \end{DoxyCompactList}\item 
+ostream \& \textbf{ operator$<$$<$=} (ostream \&ost, \textbf{ Phone} \&p)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$=. \end{DoxyCompactList}\item 
+istream \& \textbf{ operator$>$$>$} (istream \&is, \textbf{ Phone} \&p)
+\begin{DoxyCompactList}\small\item\em Operator $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{phone_8cpp_ad7ec900ad0c656aa2095f595edd3578e}} 
+\index{phone.cpp@{phone.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!phone.cpp@{phone.cpp}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{ost,  }\item[{\textbf{ Phone} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$. 
+
+Operator wypisujący pola obiektu na strumień 
+\begin{DoxyParams}{Parameters}
+{\em \&p} & wypisywany obiekt \\
+\hline
+{\em \&ost} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{phone_8cpp_a12df9612383f652d80bb35844a81d0da}} 
+\index{phone.cpp@{phone.cpp}!operator$<$$<$=@{operator$<$$<$=}}
+\index{operator$<$$<$=@{operator$<$$<$=}!phone.cpp@{phone.cpp}}
+\doxysubsubsection{operator$<$$<$=()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$= (\begin{DoxyParamCaption}\item[{ostream \&}]{ost,  }\item[{\textbf{ Phone} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$=. 
+
+Operator wypisujący pola obiektu do bazy danych 
+\begin{DoxyParams}{Parameters}
+{\em \&p} & zapisywany obiekt \\
+\hline
+{\em \&ost} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{phone_8cpp_afd64c22fd8de2f9a0e6f046fa3ddc397}} 
+\index{phone.cpp@{phone.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!phone.cpp@{phone.cpp}}
+\doxysubsubsection{operator$>$$>$()}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\textbf{ Phone} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operator $>$$>$ 
+
+Operator przypisuje polom danego obiektu wartości ze strumienia 
+\begin{DoxyParams}{Parameters}
+{\em \&p} & opisywany obiekt \\
+\hline
+{\em \&is} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}

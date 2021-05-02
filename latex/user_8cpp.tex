@@ -1,0 +1,79 @@
+\doxysection{Projekt2/user.cpp File Reference}
+\label{user_8cpp}\index{Projekt2/user.cpp@{Projekt2/user.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}battery.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}user.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \textbf{ operator$<$$<$} (ostream \&s, \textbf{ User} \&u)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$. \end{DoxyCompactList}\item 
+ostream \& \textbf{ operator$<$$<$=} (ostream \&s, \textbf{ User} \&u)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$=. \end{DoxyCompactList}\item 
+istream \& \textbf{ operator$>$$>$} (istream \&is, \textbf{ User} \&u)
+\begin{DoxyCompactList}\small\item\em Operator $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{user_8cpp_a371b92ab2305735afea182d4df998147}} 
+\index{user.cpp@{user.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!user.cpp@{user.cpp}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{s,  }\item[{\textbf{ User} \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$. 
+
+Operator wypisujący pola obiektu na strumień 
+\begin{DoxyParams}{Parameters}
+{\em \&u} & wypisywany obiekt \\
+\hline
+{\em \&s} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{user_8cpp_a002d3ba23570f6a9aa974c0d25d2e156}} 
+\index{user.cpp@{user.cpp}!operator$<$$<$=@{operator$<$$<$=}}
+\index{operator$<$$<$=@{operator$<$$<$=}!user.cpp@{user.cpp}}
+\doxysubsubsection{operator$<$$<$=()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$= (\begin{DoxyParamCaption}\item[{ostream \&}]{s,  }\item[{\textbf{ User} \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$=. 
+
+Operator wypisujący pola obiektu do bazy danych 
+\begin{DoxyParams}{Parameters}
+{\em \&u} & zapisywany obiekt \\
+\hline
+{\em \&s} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{user_8cpp_a4359e1faff52afedaae8940539a853ef}} 
+\index{user.cpp@{user.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!user.cpp@{user.cpp}}
+\doxysubsubsection{operator$>$$>$()}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\textbf{ User} \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Operator $>$$>$ 
+
+Operator przypisuje polom danego obiektu wartości ze strumienia 
+\begin{DoxyParams}{Parameters}
+{\em \&u} & opisywany obiekt \\
+\hline
+{\em \&is} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}

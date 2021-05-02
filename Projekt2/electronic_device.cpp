@@ -37,6 +37,11 @@ Electronic_device::~Electronic_device()
     #endif
 }
 
+int Electronic_device::eleQuantity()
+{
+    return number_of_objects;
+};
+
 int Electronic_device::production_year() const
 {
     return m_production_year;

@@ -1,0 +1,224 @@
+\doxysection{Parameter Class Reference}
+\label{class_parameter}\index{Parameter@{Parameter}}
+
+
+Podobiekt klasy \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid}.  
+
+
+
+
+{\ttfamily \#include $<$parameters.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Parameter} (const string \textbf{ name}=\char`\"{}\char`\"{}, const int \textbf{ value}=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny z parametrami domyślnymi. \end{DoxyCompactList}\item 
+\textbf{ Parameter} (const \textbf{ Parameter} \&p)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Parameter} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxyref{Parameter}{p.}{class_parameter}. \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ Parameter} \&p)
+\begin{DoxyCompactList}\small\item\em Operator ==. \end{DoxyCompactList}\item 
+string \textbf{ name} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie nazwy. \end{DoxyCompactList}\item 
+void \textbf{ set\+Name} (const string \&\textbf{ name})
+\begin{DoxyCompactList}\small\item\em Ustawianie nazwy. \end{DoxyCompactList}\item 
+int \textbf{ value} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie wartości parametru. \end{DoxyCompactList}\item 
+void \textbf{ set\+Value} (int \textbf{ value})
+\begin{DoxyCompactList}\small\item\em Ustawianie wartości parametru. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ par\+Quantity} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości obiektów typu \doxyref{Battery}{p.}{class_battery}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em nazwa \end{DoxyCompactList}\item 
+int \textbf{ m\+\_\+value}
+\begin{DoxyCompactList}\small\item\em wartość \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ number\+\_\+of\+\_\+objects} =0
+\begin{DoxyCompactList}\small\item\em ilość obiektów typu \doxyref{Parameter}{p.}{class_parameter} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Podobiekt klasy \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_parameter_ae54f1ba3af2b724746b7047058cb4a63}} 
+\index{Parameter@{Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!Parameter@{Parameter}}
+\doxysubsubsection{Parameter()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Parameter\+::\+Parameter (\begin{DoxyParamCaption}\item[{const string}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const int}]{value = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny z parametrami domyślnymi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name=\char`\"{}\char`\"{}} & nazwa \\
+\hline
+{\em value=0} & wartość \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_parameter_ae0d97b30ba78d54dfa6b28b30ffbf847}} 
+\index{Parameter@{Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!Parameter@{Parameter}}
+\doxysubsubsection{Parameter()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Parameter\+::\+Parameter (\begin{DoxyParamCaption}\item[{const \textbf{ Parameter} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&p} & kopiowany obiekt \doxyref{Parameter}{p.}{class_parameter} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_parameter_a6e2ade42a712f1d3675653329266e42d}} 
+\index{Parameter@{Parameter}!````~Parameter@{$\sim$Parameter}}
+\index{````~Parameter@{$\sim$Parameter}!Parameter@{Parameter}}
+\doxysubsubsection{$\sim$Parameter()}
+{\footnotesize\ttfamily Parameter\+::$\sim$\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxyref{Parameter}{p.}{class_parameter}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_parameter_a199beda5fa7ecd82564b67d2b20d4d41}} 
+\index{Parameter@{Parameter}!name@{name}}
+\index{name@{name}!Parameter@{Parameter}}
+\doxysubsubsection{name()}
+{\footnotesize\ttfamily string Parameter\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobieranie nazwy. 
+
+\begin{DoxyReturn}{Returns}
+zwraca nazwę obiektu 
+\end{DoxyReturn}
+\mbox{\label{class_parameter_a1660ddd05b07b74d7d3f1a6f277ce0b6}} 
+\index{Parameter@{Parameter}!operator==@{operator==}}
+\index{operator==@{operator==}!Parameter@{Parameter}}
+\doxysubsubsection{operator==()}
+{\footnotesize\ttfamily bool Parameter\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Parameter} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operator ==. 
+
+Operator porównujący ze sobą dwa obiekty typu \doxyref{Parameter}{p.}{class_parameter} 
+\begin{DoxyParams}{Parameters}
+{\em \&p} & obiekt porównywany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca true lub false 
+\end{DoxyReturn}
+\mbox{\label{class_parameter_a241f750dacedcd07f30edd816459f632}} 
+\index{Parameter@{Parameter}!parQuantity@{parQuantity}}
+\index{parQuantity@{parQuantity}!Parameter@{Parameter}}
+\doxysubsubsection{parQuantity()}
+{\footnotesize\ttfamily int Parameter\+::par\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobieranie ilości obiektów typu \doxyref{Battery}{p.}{class_battery}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość obiektów 
+\end{DoxyReturn}
+\mbox{\label{class_parameter_a3325324e982077663959c203e88ac42a}} 
+\index{Parameter@{Parameter}!setName@{setName}}
+\index{setName@{setName}!Parameter@{Parameter}}
+\doxysubsubsection{setName()}
+{\footnotesize\ttfamily void Parameter\+::set\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Ustawianie nazwy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&name} & nazwa obiektu \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_parameter_aa04f82fff06052cac5fc53c0b9e18d82}} 
+\index{Parameter@{Parameter}!setValue@{setValue}}
+\index{setValue@{setValue}!Parameter@{Parameter}}
+\doxysubsubsection{setValue()}
+{\footnotesize\ttfamily void Parameter\+::set\+Value (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Ustawianie wartości parametru. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & wartość \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_parameter_ad83ff48609b82dcc828d9c426d57e5b8}} 
+\index{Parameter@{Parameter}!value@{value}}
+\index{value@{value}!Parameter@{Parameter}}
+\doxysubsubsection{value()}
+{\footnotesize\ttfamily int Parameter\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobieranie wartości parametru. 
+
+\begin{DoxyReturn}{Returns}
+zwraca wartość parametru 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_parameter_ab863661b232328c0b82b7fe47fbc2fd6}} 
+\index{Parameter@{Parameter}!m\_name@{m\_name}}
+\index{m\_name@{m\_name}!Parameter@{Parameter}}
+\doxysubsubsection{m\_name}
+{\footnotesize\ttfamily string Parameter\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+nazwa 
+
+\mbox{\label{class_parameter_a1524b740e4e84e9fedd8197ec6e89977}} 
+\index{Parameter@{Parameter}!m\_value@{m\_value}}
+\index{m\_value@{m\_value}!Parameter@{Parameter}}
+\doxysubsubsection{m\_value}
+{\footnotesize\ttfamily int Parameter\+::m\+\_\+value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+wartość 
+
+\mbox{\label{class_parameter_a2ddbb5d8137a5a3cda2bf4f68b309760}} 
+\index{Parameter@{Parameter}!number\_of\_objects@{number\_of\_objects}}
+\index{number\_of\_objects@{number\_of\_objects}!Parameter@{Parameter}}
+\doxysubsubsection{number\_of\_objects}
+{\footnotesize\ttfamily int Parameter\+::number\+\_\+of\+\_\+objects =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+ilość obiektów typu \doxyref{Parameter}{p.}{class_parameter} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projekt2/\textbf{ parameters.\+h}\item 
+Projekt2/\textbf{ parameters.\+cpp}\end{DoxyCompactItemize}

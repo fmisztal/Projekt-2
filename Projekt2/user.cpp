@@ -49,17 +49,17 @@ int User::userQuantity()
     return number_of_objects;
 };
 
-User& User::operator=(const User &b)
+User& User::operator=(const User &u)
 {
-    m_name=b.name();
-    m_age=b.age();
-    m_pesel=b.pesel();
+    m_name=u.name();
+    m_age=u.age();
+    m_pesel=u.pesel();
     return *this;
 }
 
-bool User::operator==(const User &b)
+bool User::operator==(const User &u)
 {
-    return m_name==b.m_name && m_age==b.m_age && m_pesel==b.m_pesel;
+    return m_name==u.m_name && m_age==u.m_age && m_pesel==u.m_pesel;
 }
 
 string User::name() const

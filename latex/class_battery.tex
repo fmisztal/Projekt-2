@@ -1,0 +1,244 @@
+\doxysection{Battery Class Reference}
+\label{class_battery}\index{Battery@{Battery}}
+
+
+Podobiekt klasy \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}.  
+
+
+
+
+{\ttfamily \#include $<$battery.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Battery} (const int \textbf{ size}=0, const int \textbf{ lifespan}=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny z parametrami domyślnymi. \end{DoxyCompactList}\item 
+\textbf{ Battery} (const \textbf{ Battery} \&b)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Battery} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy Bateria. \end{DoxyCompactList}\item 
+\textbf{ Battery} \& \textbf{ operator=} (const \textbf{ Battery} \&b)
+\begin{DoxyCompactList}\small\item\em Operator =. \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ Battery} \&b)
+\begin{DoxyCompactList}\small\item\em Operator ==. \end{DoxyCompactList}\item 
+int \textbf{ size} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie wartości size. \end{DoxyCompactList}\item 
+void \textbf{ set\+Size} (int \textbf{ size})
+\begin{DoxyCompactList}\small\item\em Ustawianie wartości size. \end{DoxyCompactList}\item 
+int \textbf{ lifespan} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie wartości lifespan. \end{DoxyCompactList}\item 
+void \textbf{ set\+Lifespan} (int \textbf{ lifespan})
+\begin{DoxyCompactList}\small\item\em Ustawianie wartości lifespan. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ bat\+Quantity} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości obiektów typu \doxyref{Battery}{p.}{class_battery}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ m\+\_\+size}
+\begin{DoxyCompactList}\small\item\em rozmiar pojemności baterii \end{DoxyCompactList}\item 
+int \textbf{ m\+\_\+lifespan}
+\begin{DoxyCompactList}\small\item\em długość czasu pracy baterii \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ number\+\_\+of\+\_\+objects} =0
+\begin{DoxyCompactList}\small\item\em ilość obiektów typu \doxyref{Battery}{p.}{class_battery} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Podobiekt klasy \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_battery_afe45c5ed9050582a27c186c72101cdd1}} 
+\index{Battery@{Battery}!Battery@{Battery}}
+\index{Battery@{Battery}!Battery@{Battery}}
+\doxysubsubsection{Battery()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Battery\+::\+Battery (\begin{DoxyParamCaption}\item[{const int}]{size = {\ttfamily 0},  }\item[{const int}]{lifespan = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny z parametrami domyślnymi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size=0} & pojemność \\
+\hline
+{\em lifespan=0} & długość czasu pracy \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_battery_aca36aabe1b86883ba0f128c98ac63fd4}} 
+\index{Battery@{Battery}!Battery@{Battery}}
+\index{Battery@{Battery}!Battery@{Battery}}
+\doxysubsubsection{Battery()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Battery\+::\+Battery (\begin{DoxyParamCaption}\item[{const \textbf{ Battery} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&b} & kopiowany obiekt Bateria \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_battery_a637d8766eb5cbdb33ab2a19a30622bc3}} 
+\index{Battery@{Battery}!````~Battery@{$\sim$Battery}}
+\index{````~Battery@{$\sim$Battery}!Battery@{Battery}}
+\doxysubsubsection{$\sim$Battery()}
+{\footnotesize\ttfamily Battery\+::$\sim$\+Battery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy Bateria. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_battery_ac6a27bc12ee265dc787ddbcceeb14b93}} 
+\index{Battery@{Battery}!batQuantity@{batQuantity}}
+\index{batQuantity@{batQuantity}!Battery@{Battery}}
+\doxysubsubsection{batQuantity()}
+{\footnotesize\ttfamily int Battery\+::bat\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobieranie ilości obiektów typu \doxyref{Battery}{p.}{class_battery}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość obiektów 
+\end{DoxyReturn}
+\mbox{\label{class_battery_a42be4a587841609761e672623581c042}} 
+\index{Battery@{Battery}!lifespan@{lifespan}}
+\index{lifespan@{lifespan}!Battery@{Battery}}
+\doxysubsubsection{lifespan()}
+{\footnotesize\ttfamily int Battery\+::lifespan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie wartości lifespan. 
+
+\begin{DoxyReturn}{Returns}
+zwraca wartość lifespan 
+\end{DoxyReturn}
+\mbox{\label{class_battery_a1371d6cf08f9f4d081642f340a6383f5}} 
+\index{Battery@{Battery}!operator=@{operator=}}
+\index{operator=@{operator=}!Battery@{Battery}}
+\doxysubsubsection{operator=()}
+{\footnotesize\ttfamily \textbf{ Battery} \& Battery\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Battery} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Operator =. 
+
+Operator kopiuje drugi obiekt typu \doxyref{Battery}{p.}{class_battery} 
+\begin{DoxyParams}{Parameters}
+{\em \&b} & obiekt kopiowany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca kopię obiektu b 
+\end{DoxyReturn}
+\mbox{\label{class_battery_a885fd4d4ab6e2c6b7d68a793feb77d20}} 
+\index{Battery@{Battery}!operator==@{operator==}}
+\index{operator==@{operator==}!Battery@{Battery}}
+\doxysubsubsection{operator==()}
+{\footnotesize\ttfamily bool Battery\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Battery} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Operator ==. 
+
+Operator porównujący ze sobą dwa obiekty typu \doxyref{Battery}{p.}{class_battery} 
+\begin{DoxyParams}{Parameters}
+{\em \&b} & obiekt porównywany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca true lub false 
+\end{DoxyReturn}
+\mbox{\label{class_battery_a4d4a54c16ae26c77efd2158005ca287b}} 
+\index{Battery@{Battery}!setLifespan@{setLifespan}}
+\index{setLifespan@{setLifespan}!Battery@{Battery}}
+\doxysubsubsection{setLifespan()}
+{\footnotesize\ttfamily void Battery\+::set\+Lifespan (\begin{DoxyParamCaption}\item[{int}]{lifespan }\end{DoxyParamCaption})}
+
+
+
+Ustawianie wartości lifespan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lifespan} & wartość lifespan \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_battery_a35ccfc408ba53b2af322501730d15836}} 
+\index{Battery@{Battery}!setSize@{setSize}}
+\index{setSize@{setSize}!Battery@{Battery}}
+\doxysubsubsection{setSize()}
+{\footnotesize\ttfamily void Battery\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Ustawianie wartości size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & wartość size \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_battery_af1621e45d4e53b3c0cf474513aa12295}} 
+\index{Battery@{Battery}!size@{size}}
+\index{size@{size}!Battery@{Battery}}
+\doxysubsubsection{size()}
+{\footnotesize\ttfamily int Battery\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie wartości size. 
+
+\begin{DoxyReturn}{Returns}
+zwraca wartość size 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_battery_a53190e66bbdc0f0c4a15879a2869e918}} 
+\index{Battery@{Battery}!m\_lifespan@{m\_lifespan}}
+\index{m\_lifespan@{m\_lifespan}!Battery@{Battery}}
+\doxysubsubsection{m\_lifespan}
+{\footnotesize\ttfamily int Battery\+::m\+\_\+lifespan\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+długość czasu pracy baterii 
+
+\mbox{\label{class_battery_a52eed84589b1364de7b9a48a139296c3}} 
+\index{Battery@{Battery}!m\_size@{m\_size}}
+\index{m\_size@{m\_size}!Battery@{Battery}}
+\doxysubsubsection{m\_size}
+{\footnotesize\ttfamily int Battery\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+rozmiar pojemności baterii 
+
+\mbox{\label{class_battery_ad83e1b9e4440fa1b908afa9f0232d724}} 
+\index{Battery@{Battery}!number\_of\_objects@{number\_of\_objects}}
+\index{number\_of\_objects@{number\_of\_objects}!Battery@{Battery}}
+\doxysubsubsection{number\_of\_objects}
+{\footnotesize\ttfamily int Battery\+::number\+\_\+of\+\_\+objects =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+ilość obiektów typu \doxyref{Battery}{p.}{class_battery} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projekt2/\textbf{ battery.\+h}\item 
+Projekt2/\textbf{ battery.\+cpp}\end{DoxyCompactItemize}

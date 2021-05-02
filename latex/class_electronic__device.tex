@@ -1,0 +1,340 @@
+\doxysection{Electronic\+\_\+device Class Reference}
+\label{class_electronic__device}\index{Electronic\_device@{Electronic\_device}}
+
+
+Klasa abstrakcyjna \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}.  
+
+
+
+
+{\ttfamily \#include $<$electronic\+\_\+device.\+h$>$}
+
+Inheritance diagram for Electronic\+\_\+device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_electronic__device}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Electronic\+\_\+device} (const int \textbf{ production\+\_\+year}=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny z parametrem domyślnym. \end{DoxyCompactList}\item 
+\textbf{ Electronic\+\_\+device} (const \textbf{ Electronic\+\_\+device} \&e)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+virtual \textbf{ $\sim$\+Electronic\+\_\+device} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. \end{DoxyCompactList}\item 
+void \textbf{ operator++} ()
+\begin{DoxyCompactList}\small\item\em Operator ++. \end{DoxyCompactList}\item 
+void \textbf{ operator-\/-\/} ()
+\begin{DoxyCompactList}\small\item\em Operator ++. \end{DoxyCompactList}\item 
+virtual void \textbf{ ownership} ()=0
+\begin{DoxyCompactList}\small\item\em Wypisanie danych właściciela danego obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ draw} ()=0
+\begin{DoxyCompactList}\small\item\em Wypisanie obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ save} ()=0
+\begin{DoxyCompactList}\small\item\em Zapisywanie obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ open} ()=0
+\begin{DoxyCompactList}\small\item\em Odczytywanie obiektu. \end{DoxyCompactList}\item 
+\textbf{ User} \& \textbf{ user} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie podobiektu \doxyref{User}{p.}{class_user}. \end{DoxyCompactList}\item 
+void \textbf{ set\+User} (const \textbf{ User} \&\textbf{ user})
+\begin{DoxyCompactList}\small\item\em Ustawianie podobiektu \doxyref{User}{p.}{class_user}. \end{DoxyCompactList}\item 
+int \textbf{ production\+\_\+year} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie roku produkcji. \end{DoxyCompactList}\item 
+void \textbf{ set\+Production\+\_\+year} (int \textbf{ production\+\_\+year})
+\begin{DoxyCompactList}\small\item\em Ustawianie roku produkcji. \end{DoxyCompactList}\item 
+\textbf{ Battery} \& \textbf{ battery} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie podobiektu \doxyref{Battery}{p.}{class_battery}. \end{DoxyCompactList}\item 
+void \textbf{ set\+Battery} (const \textbf{ Battery} \&b)
+\begin{DoxyCompactList}\small\item\em Ustawianie podobiektu \doxyref{Battery}{p.}{class_battery}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ ele\+Quantity} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości obiektów typu \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Battery} \textbf{ m\+\_\+battery}
+\begin{DoxyCompactList}\small\item\em podobiekt bateria \end{DoxyCompactList}\item 
+\textbf{ User} \textbf{ m\+\_\+user}
+\begin{DoxyCompactList}\small\item\em podobiekt użytkownik \end{DoxyCompactList}\item 
+int \textbf{ m\+\_\+production\+\_\+year}
+\begin{DoxyCompactList}\small\item\em rok produkcji \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ number\+\_\+of\+\_\+objects} =0
+\begin{DoxyCompactList}\small\item\em ilość obiektów typu \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa abstrakcyjna \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_electronic__device_ac2fe56ccaafdad9c35c2f1878fe50357}} 
+\index{Electronic\_device@{Electronic\_device}!Electronic\_device@{Electronic\_device}}
+\index{Electronic\_device@{Electronic\_device}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{Electronic\_device()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Electronic\+\_\+device\+::\+Electronic\+\_\+device (\begin{DoxyParamCaption}\item[{const int}]{production\+\_\+year = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny z parametrem domyślnym. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em production\+\_\+year=0} & rok produkcji \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_electronic__device_a45fa8768f2f3d59f9af049430d7c4407}} 
+\index{Electronic\_device@{Electronic\_device}!Electronic\_device@{Electronic\_device}}
+\index{Electronic\_device@{Electronic\_device}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{Electronic\_device()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Electronic\+\_\+device\+::\+Electronic\+\_\+device (\begin{DoxyParamCaption}\item[{const \textbf{ Electronic\+\_\+device} \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&e} & kopiowany obiekt \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_electronic__device_a5566ec7e0f12d94a8c77a2ea5557c25f}} 
+\index{Electronic\_device@{Electronic\_device}!````~Electronic\_device@{$\sim$Electronic\_device}}
+\index{````~Electronic\_device@{$\sim$Electronic\_device}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{$\sim$Electronic\_device()}
+{\footnotesize\ttfamily Electronic\+\_\+device\+::$\sim$\+Electronic\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destruktor klasy \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_electronic__device_a600a6a00383ef313c5dd39ffd29f8619}} 
+\index{Electronic\_device@{Electronic\_device}!battery@{battery}}
+\index{battery@{battery}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{battery()}
+{\footnotesize\ttfamily \textbf{ Battery} \& Electronic\+\_\+device\+::battery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobieranie podobiektu \doxyref{Battery}{p.}{class_battery}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca referencję do podobiektu typu \doxyref{Battery}{p.}{class_battery} 
+\end{DoxyReturn}
+\mbox{\label{class_electronic__device_a79a469270f4dfb1f0863d9db702c1078}} 
+\index{Electronic\_device@{Electronic\_device}!draw@{draw}}
+\index{draw@{draw}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{draw()}
+{\footnotesize\ttfamily virtual void Electronic\+\_\+device\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Wypisanie obiektu. 
+
+Metoda wirtualna wypisująca dany obiekt 
+
+Implemented in \textbf{ Smartphone} \doxyref{}{p.}{class_smartphone_a3c7a7bcb8aa572077116bcb8fd1418f0}, \textbf{ Phone} \doxyref{}{p.}{class_phone_a702c9cbd7433dd04893ad3c510403352}, and \textbf{ Hearing\+\_\+aid} \doxyref{}{p.}{class_hearing__aid_a5f3ee142e535bdea4239cd4dc3d2ef11}.
+
+\mbox{\label{class_electronic__device_ad2e850eb5a879be761282b8cabda592f}} 
+\index{Electronic\_device@{Electronic\_device}!eleQuantity@{eleQuantity}}
+\index{eleQuantity@{eleQuantity}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{eleQuantity()}
+{\footnotesize\ttfamily int Electronic\+\_\+device\+::ele\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobieranie ilości obiektów typu \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość obiektów 
+\end{DoxyReturn}
+\mbox{\label{class_electronic__device_aa6d22ee483852a791d6c6829cbb35b56}} 
+\index{Electronic\_device@{Electronic\_device}!open@{open}}
+\index{open@{open}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{open()}
+{\footnotesize\ttfamily virtual void Electronic\+\_\+device\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Odczytywanie obiektu. 
+
+Metoda wirtualna odczytująca wartości danego obiektu z bazy danych 
+
+Implemented in \textbf{ Smartphone} \doxyref{}{p.}{class_smartphone_a876bd3c9e72ae20b561cdcfe64bd9af1}, \textbf{ Phone} \doxyref{}{p.}{class_phone_ae8bd057db6c87d435686faddec62f04f}, and \textbf{ Hearing\+\_\+aid} \doxyref{}{p.}{class_hearing__aid_a5bb779216574d499eb710cd8721951b2}.
+
+\mbox{\label{class_electronic__device_a45ec3e87d7c0e6a5a056b1b7a65caf5c}} 
+\index{Electronic\_device@{Electronic\_device}!operator++@{operator++}}
+\index{operator++@{operator++}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{operator++()}
+{\footnotesize\ttfamily void Electronic\+\_\+device\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operator ++. 
+
+zwiększa wartość pola lifespan podobiektu Baterry o 5 \mbox{\label{class_electronic__device_a519f8f395c546ffeefb7ae7708ec3c7c}} 
+\index{Electronic\_device@{Electronic\_device}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{operator-\/-\/()}
+{\footnotesize\ttfamily void Electronic\+\_\+device\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operator ++. 
+
+zmniejsza wartość pola lifespan podobiektu Baterry o 5 \mbox{\label{class_electronic__device_a2658a9d508ac6a354b86b27672d9f6cc}} 
+\index{Electronic\_device@{Electronic\_device}!ownership@{ownership}}
+\index{ownership@{ownership}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{ownership()}
+{\footnotesize\ttfamily virtual void Electronic\+\_\+device\+::ownership (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Wypisanie danych właściciela danego obiektu. 
+
+Metoda wirtualna wypisująca typ obiektu i dane jego urzytkownika 
+
+Implemented in \textbf{ Smartphone} \doxyref{}{p.}{class_smartphone_acc99907dd973908dd35911fe1b6d76f1}, \textbf{ Phone} \doxyref{}{p.}{class_phone_afee940e1f53f6e649a4c02252ebf03c0}, and \textbf{ Hearing\+\_\+aid} \doxyref{}{p.}{class_hearing__aid_a5bc2264d6ba489949511d47e31b9774a}.
+
+\mbox{\label{class_electronic__device_afe558ecb0815c25896620a9fd930a952}} 
+\index{Electronic\_device@{Electronic\_device}!production\_year@{production\_year}}
+\index{production\_year@{production\_year}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{production\_year()}
+{\footnotesize\ttfamily int Electronic\+\_\+device\+::production\+\_\+year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie roku produkcji. 
+
+\begin{DoxyReturn}{Returns}
+zwraca rok produkcji 
+\end{DoxyReturn}
+\mbox{\label{class_electronic__device_a7adb9bfea1f37e46c354a42abc1016ba}} 
+\index{Electronic\_device@{Electronic\_device}!save@{save}}
+\index{save@{save}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{save()}
+{\footnotesize\ttfamily virtual void Electronic\+\_\+device\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Zapisywanie obiektu. 
+
+Metoda wirtualna zapisująca dany obiekt w bazie danych 
+
+Implemented in \textbf{ Smartphone} \doxyref{}{p.}{class_smartphone_a858da17e0c8c219f4a2a0f5ff3f081f5}, \textbf{ Phone} \doxyref{}{p.}{class_phone_ada358d103731038ed63bca396adde49a}, and \textbf{ Hearing\+\_\+aid} \doxyref{}{p.}{class_hearing__aid_aa8ede23c48ca8a076c314a10a171e29d}.
+
+\mbox{\label{class_electronic__device_a2ff6b220ddfe9c7540977fa3292a3128}} 
+\index{Electronic\_device@{Electronic\_device}!setBattery@{setBattery}}
+\index{setBattery@{setBattery}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{setBattery()}
+{\footnotesize\ttfamily void Electronic\+\_\+device\+::set\+Battery (\begin{DoxyParamCaption}\item[{const \textbf{ Battery} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Ustawianie podobiektu \doxyref{Battery}{p.}{class_battery}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&user} & podobiekt typu \doxyref{Battery}{p.}{class_battery} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_electronic__device_ae8ffe8ffd3a179535edb1d1952c90332}} 
+\index{Electronic\_device@{Electronic\_device}!setProduction\_year@{setProduction\_year}}
+\index{setProduction\_year@{setProduction\_year}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{setProduction\_year()}
+{\footnotesize\ttfamily void Electronic\+\_\+device\+::set\+Production\+\_\+year (\begin{DoxyParamCaption}\item[{int}]{production\+\_\+year }\end{DoxyParamCaption})}
+
+
+
+Ustawianie roku produkcji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em production\+\_\+year} & ustawia rok produkcji \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_electronic__device_a0b8c4bd8bf1fba7c8a16a5a752e027e3}} 
+\index{Electronic\_device@{Electronic\_device}!setUser@{setUser}}
+\index{setUser@{setUser}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{setUser()}
+{\footnotesize\ttfamily void Electronic\+\_\+device\+::set\+User (\begin{DoxyParamCaption}\item[{const \textbf{ User} \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Ustawianie podobiektu \doxyref{User}{p.}{class_user}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&user} & podobiekt typu \doxyref{User}{p.}{class_user} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_electronic__device_adca48c37e29efebd1ba9b6bb3e0c5d77}} 
+\index{Electronic\_device@{Electronic\_device}!user@{user}}
+\index{user@{user}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{user()}
+{\footnotesize\ttfamily \textbf{ User} \& Electronic\+\_\+device\+::user (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobieranie podobiektu \doxyref{User}{p.}{class_user}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca referencję do podobiektu typu \doxyref{User}{p.}{class_user} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_electronic__device_a09f9410d2a5cbb0b9cc11050b0ed2a43}} 
+\index{Electronic\_device@{Electronic\_device}!m\_battery@{m\_battery}}
+\index{m\_battery@{m\_battery}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{m\_battery}
+{\footnotesize\ttfamily \textbf{ Battery} Electronic\+\_\+device\+::m\+\_\+battery\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+podobiekt bateria 
+
+\mbox{\label{class_electronic__device_adfcdaeaef14e189c2fd857f4504212db}} 
+\index{Electronic\_device@{Electronic\_device}!m\_production\_year@{m\_production\_year}}
+\index{m\_production\_year@{m\_production\_year}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{m\_production\_year}
+{\footnotesize\ttfamily int Electronic\+\_\+device\+::m\+\_\+production\+\_\+year\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+rok produkcji 
+
+\mbox{\label{class_electronic__device_affccc94410aed11131827627e13cd427}} 
+\index{Electronic\_device@{Electronic\_device}!m\_user@{m\_user}}
+\index{m\_user@{m\_user}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{m\_user}
+{\footnotesize\ttfamily \textbf{ User} Electronic\+\_\+device\+::m\+\_\+user\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+podobiekt użytkownik 
+
+\mbox{\label{class_electronic__device_a2dc4025c3d84d3e2b6fa90ae4c5fb2e5}} 
+\index{Electronic\_device@{Electronic\_device}!number\_of\_objects@{number\_of\_objects}}
+\index{number\_of\_objects@{number\_of\_objects}!Electronic\_device@{Electronic\_device}}
+\doxysubsubsection{number\_of\_objects}
+{\footnotesize\ttfamily int Electronic\+\_\+device\+::number\+\_\+of\+\_\+objects =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+ilość obiektów typu \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projekt2/\textbf{ electronic\+\_\+device.\+h}\item 
+Projekt2/\textbf{ electronic\+\_\+device.\+cpp}\end{DoxyCompactItemize}

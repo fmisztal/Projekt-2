@@ -1,0 +1,310 @@
+\doxysection{Smartphone Class Reference}
+\label{class_smartphone}\index{Smartphone@{Smartphone}}
+
+
+Klasa \doxyref{Smartphone}{p.}{class_smartphone} dziedzicząca po klasie \doxyref{Phone}{p.}{class_phone}.  
+
+
+
+
+{\ttfamily \#include $<$smartphone.\+h$>$}
+
+Inheritance diagram for Smartphone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_smartphone}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Smartphone} (const int \textbf{ inches}=0, const int \textbf{ weight}=0, const int \textbf{ megapiksels}=0, const string \textbf{ brand}=\char`\"{}\char`\"{}, const int \textbf{ processor}=0, const bool \textbf{ dual\+\_\+sim}=false)
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny z parametrami domyślnym. \end{DoxyCompactList}\item 
+\textbf{ Smartphone} (const \textbf{ Smartphone} \&s)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Smartphone} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxyref{Smartphone}{p.}{class_smartphone}. \end{DoxyCompactList}\item 
+\textbf{ Smartphone} \& \textbf{ operator=} (const \textbf{ Smartphone} \&s)
+\begin{DoxyCompactList}\small\item\em Operator =. \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ Smartphone} \&s)
+\begin{DoxyCompactList}\small\item\em Operator ==. \end{DoxyCompactList}\item 
+virtual void \textbf{ ownership} ()
+\begin{DoxyCompactList}\small\item\em Wypisanie danych właściciela obiektu \doxyref{Smartphone}{p.}{class_smartphone}. \end{DoxyCompactList}\item 
+virtual void \textbf{ draw} ()
+\begin{DoxyCompactList}\small\item\em Wypisanie obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ save} ()
+\begin{DoxyCompactList}\small\item\em Zapisywanie obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ open} ()
+\begin{DoxyCompactList}\small\item\em Odczytywanie obiektu. \end{DoxyCompactList}\item 
+int \textbf{ inches} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości cali. \end{DoxyCompactList}\item 
+void \textbf{ set\+Inches} (int \textbf{ inches})
+\begin{DoxyCompactList}\small\item\em Ustawianie ilości cali. \end{DoxyCompactList}\item 
+int \textbf{ weight} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie wagi. \end{DoxyCompactList}\item 
+void \textbf{ set\+Weight} (int \textbf{ weight})
+\begin{DoxyCompactList}\small\item\em Ustawianie wagi. \end{DoxyCompactList}\item 
+int \textbf{ megapiksels} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości megapikseli. \end{DoxyCompactList}\item 
+void \textbf{ set\+Megapiksels} (int \textbf{ megapiksels})
+\begin{DoxyCompactList}\small\item\em Ustawianie ilości megapikseli. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ smartphone\+Quantity} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości obiektów typu \doxyref{Smartphone}{p.}{class_smartphone}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Klasa \doxyref{Smartphone}{p.}{class_smartphone} dziedzicząca po klasie \doxyref{Phone}{p.}{class_phone}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_smartphone_a08283dcbf065f6bf5b434df8e2de4ccd}} 
+\index{Smartphone@{Smartphone}!Smartphone@{Smartphone}}
+\index{Smartphone@{Smartphone}!Smartphone@{Smartphone}}
+\doxysubsubsection{Smartphone()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Smartphone\+::\+Smartphone (\begin{DoxyParamCaption}\item[{const int}]{inches = {\ttfamily 0},  }\item[{const int}]{weight = {\ttfamily 0},  }\item[{const int}]{megapiksels = {\ttfamily 0},  }\item[{const string}]{brand = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const int}]{processor = {\ttfamily 0},  }\item[{const bool}]{dual\+\_\+sim = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny z parametrami domyślnym. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inches=0} & przekątna ekranu \\
+\hline
+{\em weight=0} & waga \\
+\hline
+{\em megapiksels=0} & ilość megapikseli \\
+\hline
+{\em brand=\char`\"{}\char`\"{}} & marka \\
+\hline
+{\em processor=0} & procesor \\
+\hline
+{\em dual\+\_\+sim=false} & czy posiada dual sim \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_smartphone_afe2c43de0965a5c0f66cba6259987714}} 
+\index{Smartphone@{Smartphone}!Smartphone@{Smartphone}}
+\index{Smartphone@{Smartphone}!Smartphone@{Smartphone}}
+\doxysubsubsection{Smartphone()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Smartphone\+::\+Smartphone (\begin{DoxyParamCaption}\item[{const \textbf{ Smartphone} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&p} & kopiowany obiekt \doxyref{Smartphone}{p.}{class_smartphone} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_smartphone_a51ce3c45addb3e50fdfa4163adafc452}} 
+\index{Smartphone@{Smartphone}!````~Smartphone@{$\sim$Smartphone}}
+\index{````~Smartphone@{$\sim$Smartphone}!Smartphone@{Smartphone}}
+\doxysubsubsection{$\sim$Smartphone()}
+{\footnotesize\ttfamily Smartphone\+::$\sim$\+Smartphone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxyref{Smartphone}{p.}{class_smartphone}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_smartphone_a3c7a7bcb8aa572077116bcb8fd1418f0}} 
+\index{Smartphone@{Smartphone}!draw@{draw}}
+\index{draw@{draw}!Smartphone@{Smartphone}}
+\doxysubsubsection{draw()}
+{\footnotesize\ttfamily void Smartphone\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Wypisanie obiektu. 
+
+Metoda wirtualna wypisująca obiekt \doxyref{Smartphone}{p.}{class_smartphone} 
+
+Reimplemented from \textbf{ Phone} \doxyref{}{p.}{class_phone_a702c9cbd7433dd04893ad3c510403352}.
+
+\mbox{\label{class_smartphone_a24d96d39e4e60179ebdc324da184e5fd}} 
+\index{Smartphone@{Smartphone}!inches@{inches}}
+\index{inches@{inches}!Smartphone@{Smartphone}}
+\doxysubsubsection{inches()}
+{\footnotesize\ttfamily int Smartphone\+::inches (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie ilości cali. 
+
+\begin{DoxyReturn}{Returns}
+zwraca przekątną ekranu obiektu 
+\end{DoxyReturn}
+\mbox{\label{class_smartphone_a56df8eb1eebb00e8638628350bb4c8d2}} 
+\index{Smartphone@{Smartphone}!megapiksels@{megapiksels}}
+\index{megapiksels@{megapiksels}!Smartphone@{Smartphone}}
+\doxysubsubsection{megapiksels()}
+{\footnotesize\ttfamily int Smartphone\+::megapiksels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie ilości megapikseli. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość megapikseli 
+\end{DoxyReturn}
+\mbox{\label{class_smartphone_a876bd3c9e72ae20b561cdcfe64bd9af1}} 
+\index{Smartphone@{Smartphone}!open@{open}}
+\index{open@{open}!Smartphone@{Smartphone}}
+\doxysubsubsection{open()}
+{\footnotesize\ttfamily void Smartphone\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Odczytywanie obiektu. 
+
+Metoda wirtualna odczytująca wartości obiektu \doxyref{Smartphone}{p.}{class_smartphone} z bazy danych 
+
+Reimplemented from \textbf{ Phone} \doxyref{}{p.}{class_phone_ae8bd057db6c87d435686faddec62f04f}.
+
+\mbox{\label{class_smartphone_a327b46cacf103ef18ddcbd0a41ca8eb9}} 
+\index{Smartphone@{Smartphone}!operator=@{operator=}}
+\index{operator=@{operator=}!Smartphone@{Smartphone}}
+\doxysubsubsection{operator=()}
+{\footnotesize\ttfamily \textbf{ Smartphone} \& Smartphone\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Smartphone} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Operator =. 
+
+Operator kopiuje drugi obiekt typu \doxyref{Smartphone}{p.}{class_smartphone} 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & obiekt kopiowany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca kopię obiektu s 
+\end{DoxyReturn}
+\mbox{\label{class_smartphone_a14b6cee64d4024e44eb08b5c707ee9c8}} 
+\index{Smartphone@{Smartphone}!operator==@{operator==}}
+\index{operator==@{operator==}!Smartphone@{Smartphone}}
+\doxysubsubsection{operator==()}
+{\footnotesize\ttfamily bool Smartphone\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Smartphone} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Operator ==. 
+
+Operator porównujący ze sobą dwa obiekty typu \doxyref{Smartphone}{p.}{class_smartphone} 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & obiekt porównywany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca true lub false 
+\end{DoxyReturn}
+\mbox{\label{class_smartphone_acc99907dd973908dd35911fe1b6d76f1}} 
+\index{Smartphone@{Smartphone}!ownership@{ownership}}
+\index{ownership@{ownership}!Smartphone@{Smartphone}}
+\doxysubsubsection{ownership()}
+{\footnotesize\ttfamily void Smartphone\+::ownership (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Wypisanie danych właściciela obiektu \doxyref{Smartphone}{p.}{class_smartphone}. 
+
+Metoda wirtualna wypisująca dane urzytkownika obiektu \doxyref{Smartphone}{p.}{class_smartphone} 
+
+Reimplemented from \textbf{ Phone} \doxyref{}{p.}{class_phone_afee940e1f53f6e649a4c02252ebf03c0}.
+
+\mbox{\label{class_smartphone_a858da17e0c8c219f4a2a0f5ff3f081f5}} 
+\index{Smartphone@{Smartphone}!save@{save}}
+\index{save@{save}!Smartphone@{Smartphone}}
+\doxysubsubsection{save()}
+{\footnotesize\ttfamily void Smartphone\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Zapisywanie obiektu. 
+
+Metoda wirtualna zapisująca obiekt \doxyref{Smartphone}{p.}{class_smartphone} w bazie danych 
+
+Reimplemented from \textbf{ Phone} \doxyref{}{p.}{class_phone_ada358d103731038ed63bca396adde49a}.
+
+\mbox{\label{class_smartphone_abb18dc8896af87b120ffb11da2687296}} 
+\index{Smartphone@{Smartphone}!setInches@{setInches}}
+\index{setInches@{setInches}!Smartphone@{Smartphone}}
+\doxysubsubsection{setInches()}
+{\footnotesize\ttfamily void Smartphone\+::set\+Inches (\begin{DoxyParamCaption}\item[{int}]{inches }\end{DoxyParamCaption})}
+
+
+
+Ustawianie ilości cali. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inches} & ilość cali \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_smartphone_a36fb1264dc23e4abae53d7f0c74a09a8}} 
+\index{Smartphone@{Smartphone}!setMegapiksels@{setMegapiksels}}
+\index{setMegapiksels@{setMegapiksels}!Smartphone@{Smartphone}}
+\doxysubsubsection{setMegapiksels()}
+{\footnotesize\ttfamily void Smartphone\+::set\+Megapiksels (\begin{DoxyParamCaption}\item[{int}]{megapiksels }\end{DoxyParamCaption})}
+
+
+
+Ustawianie ilości megapikseli. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em megapiksels} & ilość megapikseli \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_smartphone_a30b7ae7a88a87434b232d0ac296558e9}} 
+\index{Smartphone@{Smartphone}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!Smartphone@{Smartphone}}
+\doxysubsubsection{setWeight()}
+{\footnotesize\ttfamily void Smartphone\+::set\+Weight (\begin{DoxyParamCaption}\item[{int}]{weight }\end{DoxyParamCaption})}
+
+
+
+Ustawianie wagi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weight} & waga obiektu \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_smartphone_adfe94dcd311631845e3e60258203cc2f}} 
+\index{Smartphone@{Smartphone}!smartphoneQuantity@{smartphoneQuantity}}
+\index{smartphoneQuantity@{smartphoneQuantity}!Smartphone@{Smartphone}}
+\doxysubsubsection{smartphoneQuantity()}
+{\footnotesize\ttfamily int Smartphone\+::smartphone\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobieranie ilości obiektów typu \doxyref{Smartphone}{p.}{class_smartphone}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość obiektów 
+\end{DoxyReturn}
+\mbox{\label{class_smartphone_a9d6817bb5388559863b604255c7aa44f}} 
+\index{Smartphone@{Smartphone}!weight@{weight}}
+\index{weight@{weight}!Smartphone@{Smartphone}}
+\doxysubsubsection{weight()}
+{\footnotesize\ttfamily int Smartphone\+::weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie wagi. 
+
+\begin{DoxyReturn}{Returns}
+zwraca wagę obiektu 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projekt2/\textbf{ smartphone.\+h}\item 
+Projekt2/\textbf{ smartphone.\+cpp}\end{DoxyCompactItemize}

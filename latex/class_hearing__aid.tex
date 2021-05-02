@@ -1,0 +1,402 @@
+\doxysection{Hearing\+\_\+aid Class Reference}
+\label{class_hearing__aid}\index{Hearing\_aid@{Hearing\_aid}}
+
+
+Klasa \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} dziedzicząca po klasie \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}.  
+
+
+
+
+{\ttfamily \#include $<$Hearing\+\_\+aid.\+h$>$}
+
+Inheritance diagram for Hearing\+\_\+aid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_hearing__aid}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Hearing\+\_\+aid} (const string \textbf{ name}=\char`\"{}\char`\"{}, const double \textbf{ amplification\+\_\+x}=0, const int number\+\_\+of\+\_\+patrameters=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny z parametrami domyślnymi. \end{DoxyCompactList}\item 
+\textbf{ Hearing\+\_\+aid} (const \textbf{ Hearing\+\_\+aid} \&h)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Hearing\+\_\+aid} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid}. \end{DoxyCompactList}\item 
+void \textbf{ delete\+Vector} ()
+\begin{DoxyCompactList}\small\item\em Usuwanie wektora z parametrami. \end{DoxyCompactList}\item 
+virtual void \textbf{ ownership} ()
+\begin{DoxyCompactList}\small\item\em Wypisanie danych właściciela obiektu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid}. \end{DoxyCompactList}\item 
+virtual void \textbf{ draw} ()
+\begin{DoxyCompactList}\small\item\em Wypisanie obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ save} ()
+\begin{DoxyCompactList}\small\item\em Zapisywanie obiektu. \end{DoxyCompactList}\item 
+virtual void \textbf{ open} ()
+\begin{DoxyCompactList}\small\item\em Odczytywanie obiektu. \end{DoxyCompactList}\item 
+\textbf{ Hearing\+\_\+aid} \& \textbf{ operator=} (\textbf{ Hearing\+\_\+aid} \&h)
+\begin{DoxyCompactList}\small\item\em Operator =. \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ Hearing\+\_\+aid} \&h)
+\begin{DoxyCompactList}\small\item\em Operator ==. \end{DoxyCompactList}\item 
+\textbf{ operator string} ()
+\begin{DoxyCompactList}\small\item\em Operator string() \end{DoxyCompactList}\item 
+string \textbf{ name} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie nazwy. \end{DoxyCompactList}\item 
+void \textbf{ set\+Name} (const string \&\textbf{ name})
+\begin{DoxyCompactList}\small\item\em Ustawianie nazwy. \end{DoxyCompactList}\item 
+int \textbf{ number\+\_\+of\+\_\+parameters} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie liczby parametrów. \end{DoxyCompactList}\item 
+void \textbf{ set\+Number\+\_\+of\+\_\+parameters} (int \textbf{ number\+\_\+of\+\_\+parameters})
+\begin{DoxyCompactList}\small\item\em Ustawianie liczby parametrów. \end{DoxyCompactList}\item 
+double \textbf{ amplification\+\_\+x} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie amplifikacji. \end{DoxyCompactList}\item 
+void \textbf{ set\+Amplification\+\_\+x} (double \textbf{ amplification\+\_\+x})
+\begin{DoxyCompactList}\small\item\em Ustawianie amplifikacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ obj\+Quantity} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości obiektów typu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \textbf{ Parameter} $\ast$ $>$ \textbf{ parameters}
+\begin{DoxyCompactList}\small\item\em wektor podobiektów dynamicznych typu \doxyref{Parameter}{p.}{class_parameter} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em nazwa obiektu \end{DoxyCompactList}\item 
+int \textbf{ m\+\_\+number\+\_\+of\+\_\+parameters}
+\begin{DoxyCompactList}\small\item\em liczba parametrów \end{DoxyCompactList}\item 
+double \textbf{ m\+\_\+amplification\+\_\+x}
+\begin{DoxyCompactList}\small\item\em wartość amplifikacji \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ number\+\_\+of\+\_\+objects} =0
+\begin{DoxyCompactList}\small\item\em ilość obiektów typu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} dziedzicząca po klasie \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_hearing__aid_aef185eb7173f30eb5cc1a68308acf0f2}} 
+\index{Hearing\_aid@{Hearing\_aid}!Hearing\_aid@{Hearing\_aid}}
+\index{Hearing\_aid@{Hearing\_aid}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{Hearing\_aid()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Hearing\+\_\+aid\+::\+Hearing\+\_\+aid (\begin{DoxyParamCaption}\item[{const string}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const double}]{amplification\+\_\+x = {\ttfamily 0},  }\item[{const int}]{number\+\_\+of\+\_\+patrameters = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny z parametrami domyślnymi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name=\char`\"{}\char`\"{}} & nazwa obiektu \\
+\hline
+{\em amplification\+\_\+x=0} & amplifikacja \\
+\hline
+{\em number\+\_\+of\+\_\+patrameters=0} & liczba parametrów \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_hearing__aid_a1d51682ab28476cd69751510f2f8f709}} 
+\index{Hearing\_aid@{Hearing\_aid}!Hearing\_aid@{Hearing\_aid}}
+\index{Hearing\_aid@{Hearing\_aid}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{Hearing\_aid()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Hearing\+\_\+aid\+::\+Hearing\+\_\+aid (\begin{DoxyParamCaption}\item[{const \textbf{ Hearing\+\_\+aid} \&}]{h }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&h} & kopiowany obiekt hearing\+\_\+aid \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_hearing__aid_a5d602196d422eda0185cc8d03289ed84}} 
+\index{Hearing\_aid@{Hearing\_aid}!````~Hearing\_aid@{$\sim$Hearing\_aid}}
+\index{````~Hearing\_aid@{$\sim$Hearing\_aid}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{$\sim$Hearing\_aid()}
+{\footnotesize\ttfamily Hearing\+\_\+aid\+::$\sim$\+Hearing\+\_\+aid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_hearing__aid_a923b53e9250b5977f4ce807831ad813e}} 
+\index{Hearing\_aid@{Hearing\_aid}!amplification\_x@{amplification\_x}}
+\index{amplification\_x@{amplification\_x}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{amplification\_x()}
+{\footnotesize\ttfamily double Hearing\+\_\+aid\+::amplification\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie amplifikacji. 
+
+\begin{DoxyReturn}{Returns}
+zwraca wartość amplifikacji 
+\end{DoxyReturn}
+\mbox{\label{class_hearing__aid_abbe6601db64926b5e496b2fd67e3be49}} 
+\index{Hearing\_aid@{Hearing\_aid}!deleteVector@{deleteVector}}
+\index{deleteVector@{deleteVector}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{deleteVector()}
+{\footnotesize\ttfamily void Hearing\+\_\+aid\+::delete\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Usuwanie wektora z parametrami. 
+
+Metoda kasuje wszystkie podobiekty dynamiczne \doxyref{Parameter}{p.}{class_parameter} i czyści wektor \mbox{\label{class_hearing__aid_a5f3ee142e535bdea4239cd4dc3d2ef11}} 
+\index{Hearing\_aid@{Hearing\_aid}!draw@{draw}}
+\index{draw@{draw}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{draw()}
+{\footnotesize\ttfamily void Hearing\+\_\+aid\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Wypisanie obiektu. 
+
+Metoda wirtualna wypisująca obiekt \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} 
+
+Implements \textbf{ Electronic\+\_\+device} \doxyref{}{p.}{class_electronic__device_a79a469270f4dfb1f0863d9db702c1078}.
+
+\mbox{\label{class_hearing__aid_a75dc5d57194a097a07abeaad576d3183}} 
+\index{Hearing\_aid@{Hearing\_aid}!name@{name}}
+\index{name@{name}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{name()}
+{\footnotesize\ttfamily string Hearing\+\_\+aid\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie nazwy. 
+
+\begin{DoxyReturn}{Returns}
+zwraca nazwę obiektu 
+\end{DoxyReturn}
+\mbox{\label{class_hearing__aid_a260abc3a9b51d4ad47d699425c6ea218}} 
+\index{Hearing\_aid@{Hearing\_aid}!number\_of\_parameters@{number\_of\_parameters}}
+\index{number\_of\_parameters@{number\_of\_parameters}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{number\_of\_parameters()}
+{\footnotesize\ttfamily int Hearing\+\_\+aid\+::number\+\_\+of\+\_\+parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie liczby parametrów. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość parametrów znajdujących się w obiekcie 
+\end{DoxyReturn}
+\mbox{\label{class_hearing__aid_a8a668079a54f3f92cb80442b31f5662d}} 
+\index{Hearing\_aid@{Hearing\_aid}!objQuantity@{objQuantity}}
+\index{objQuantity@{objQuantity}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{objQuantity()}
+{\footnotesize\ttfamily int Hearing\+\_\+aid\+::obj\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobieranie ilości obiektów typu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość obiektów 
+\end{DoxyReturn}
+\mbox{\label{class_hearing__aid_a5bb779216574d499eb710cd8721951b2}} 
+\index{Hearing\_aid@{Hearing\_aid}!open@{open}}
+\index{open@{open}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{open()}
+{\footnotesize\ttfamily void Hearing\+\_\+aid\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Odczytywanie obiektu. 
+
+Metoda wirtualna odczytująca wartości obiektu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} z bazy danych 
+
+Implements \textbf{ Electronic\+\_\+device} \doxyref{}{p.}{class_electronic__device_aa6d22ee483852a791d6c6829cbb35b56}.
+
+\mbox{\label{class_hearing__aid_a5ca274ee1015cc8d9335b106e267ecc5}} 
+\index{Hearing\_aid@{Hearing\_aid}!operator string@{operator string}}
+\index{operator string@{operator string}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{operator string()}
+{\footnotesize\ttfamily Hearing\+\_\+aid\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operator string() 
+
+Operator rzutujący amplifikację na typ string \begin{DoxyReturn}{Returns}
+zwraca amplifikację wraz z dodatkowym tekstem 
+\end{DoxyReturn}
+\mbox{\label{class_hearing__aid_a988d76eeccd28056385b4d57d0677977}} 
+\index{Hearing\_aid@{Hearing\_aid}!operator=@{operator=}}
+\index{operator=@{operator=}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{operator=()}
+{\footnotesize\ttfamily \textbf{ Hearing\+\_\+aid} \& Hearing\+\_\+aid\+::operator= (\begin{DoxyParamCaption}\item[{\textbf{ Hearing\+\_\+aid} \&}]{h }\end{DoxyParamCaption})}
+
+
+
+Operator =. 
+
+Operator kopiuje drugi obiekt typu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} 
+\begin{DoxyParams}{Parameters}
+{\em \&h} & obiekt kopiowany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca kopię obiektu h 
+\end{DoxyReturn}
+\mbox{\label{class_hearing__aid_a8029788819b0c5b4ed5ca6bc319defa2}} 
+\index{Hearing\_aid@{Hearing\_aid}!operator==@{operator==}}
+\index{operator==@{operator==}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{operator==()}
+{\footnotesize\ttfamily bool Hearing\+\_\+aid\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Hearing\+\_\+aid} \&}]{h }\end{DoxyParamCaption})}
+
+
+
+Operator ==. 
+
+Operator porównujący ze sobą dwa obiekty typu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} 
+\begin{DoxyParams}{Parameters}
+{\em \&h} & obiekt porównywany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca true lub false 
+\end{DoxyReturn}
+\mbox{\label{class_hearing__aid_a5bc2264d6ba489949511d47e31b9774a}} 
+\index{Hearing\_aid@{Hearing\_aid}!ownership@{ownership}}
+\index{ownership@{ownership}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{ownership()}
+{\footnotesize\ttfamily void Hearing\+\_\+aid\+::ownership (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Wypisanie danych właściciela obiektu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid}. 
+
+Metoda wirtualna wypisująca dane urzytkownika obiektu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} 
+
+Implements \textbf{ Electronic\+\_\+device} \doxyref{}{p.}{class_electronic__device_a2658a9d508ac6a354b86b27672d9f6cc}.
+
+\mbox{\label{class_hearing__aid_aa8ede23c48ca8a076c314a10a171e29d}} 
+\index{Hearing\_aid@{Hearing\_aid}!save@{save}}
+\index{save@{save}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{save()}
+{\footnotesize\ttfamily void Hearing\+\_\+aid\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Zapisywanie obiektu. 
+
+Metoda wirtualna zapisująca obiekt \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} w bazie danych 
+
+Implements \textbf{ Electronic\+\_\+device} \doxyref{}{p.}{class_electronic__device_a7adb9bfea1f37e46c354a42abc1016ba}.
+
+\mbox{\label{class_hearing__aid_a11724728ead7024c688d9bee206ad490}} 
+\index{Hearing\_aid@{Hearing\_aid}!setAmplification\_x@{setAmplification\_x}}
+\index{setAmplification\_x@{setAmplification\_x}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{setAmplification\_x()}
+{\footnotesize\ttfamily void Hearing\+\_\+aid\+::set\+Amplification\+\_\+x (\begin{DoxyParamCaption}\item[{double}]{amplification\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+Ustawianie amplifikacji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amplification\+\_\+x} & wartosć amplifikacji \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_hearing__aid_a103c6b07888eb41d5846c65119ae5842}} 
+\index{Hearing\_aid@{Hearing\_aid}!setName@{setName}}
+\index{setName@{setName}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{setName()}
+{\footnotesize\ttfamily void Hearing\+\_\+aid\+::set\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Ustawianie nazwy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&name} & nazwa obiektu \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_hearing__aid_ac611cd44f40cbcb0e8547c3f40fe25a7}} 
+\index{Hearing\_aid@{Hearing\_aid}!setNumber\_of\_parameters@{setNumber\_of\_parameters}}
+\index{setNumber\_of\_parameters@{setNumber\_of\_parameters}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{setNumber\_of\_parameters()}
+{\footnotesize\ttfamily void Hearing\+\_\+aid\+::set\+Number\+\_\+of\+\_\+parameters (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+parameters }\end{DoxyParamCaption})}
+
+
+
+Ustawianie liczby parametrów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+\_\+of\+\_\+parameters} & ilość parametrów \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_hearing__aid_a630a58d6ac2a0002ec5d237ee6edd108}} 
+\index{Hearing\_aid@{Hearing\_aid}!m\_amplification\_x@{m\_amplification\_x}}
+\index{m\_amplification\_x@{m\_amplification\_x}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{m\_amplification\_x}
+{\footnotesize\ttfamily double Hearing\+\_\+aid\+::m\+\_\+amplification\+\_\+x\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+wartość amplifikacji 
+
+\mbox{\label{class_hearing__aid_a9a619ec98d44cdda1aed5175640511d5}} 
+\index{Hearing\_aid@{Hearing\_aid}!m\_name@{m\_name}}
+\index{m\_name@{m\_name}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{m\_name}
+{\footnotesize\ttfamily string Hearing\+\_\+aid\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+nazwa obiektu 
+
+\mbox{\label{class_hearing__aid_ab18ebe3a51e0b81a0f31cc60ed617f1d}} 
+\index{Hearing\_aid@{Hearing\_aid}!m\_number\_of\_parameters@{m\_number\_of\_parameters}}
+\index{m\_number\_of\_parameters@{m\_number\_of\_parameters}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{m\_number\_of\_parameters}
+{\footnotesize\ttfamily int Hearing\+\_\+aid\+::m\+\_\+number\+\_\+of\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+liczba parametrów 
+
+\mbox{\label{class_hearing__aid_a0b013f4c98ab5e4b5eac59750632ad38}} 
+\index{Hearing\_aid@{Hearing\_aid}!number\_of\_objects@{number\_of\_objects}}
+\index{number\_of\_objects@{number\_of\_objects}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{number\_of\_objects}
+{\footnotesize\ttfamily int Hearing\+\_\+aid\+::number\+\_\+of\+\_\+objects =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+ilość obiektów typu \doxyref{Hearing\+\_\+aid}{p.}{class_hearing__aid} 
+
+\mbox{\label{class_hearing__aid_afb544e75c400e15ebe55654efe760797}} 
+\index{Hearing\_aid@{Hearing\_aid}!parameters@{parameters}}
+\index{parameters@{parameters}!Hearing\_aid@{Hearing\_aid}}
+\doxysubsubsection{parameters}
+{\footnotesize\ttfamily vector$<$\textbf{ Parameter}$\ast$$>$ Hearing\+\_\+aid\+::parameters}
+
+
+
+wektor podobiektów dynamicznych typu \doxyref{Parameter}{p.}{class_parameter} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projekt2/\textbf{ Hearing\+\_\+aid.\+h}\item 
+Projekt2/\textbf{ Hearing\+\_\+aid.\+cpp}\end{DoxyCompactItemize}

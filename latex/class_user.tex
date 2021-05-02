@@ -1,0 +1,290 @@
+\doxysection{User Class Reference}
+\label{class_user}\index{User@{User}}
+
+
+Podobiekt klasy \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}.  
+
+
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ User} (string \textbf{ name}=\char`\"{}\char`\"{}, const int \textbf{ age}=0, const int \textbf{ pesel}=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny z parametrami domyślnymi. \end{DoxyCompactList}\item 
+\textbf{ User} (const \textbf{ User} \&u)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+User} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxyref{User}{p.}{class_user}. \end{DoxyCompactList}\item 
+\textbf{ User} \& \textbf{ operator=} (const \textbf{ User} \&u)
+\begin{DoxyCompactList}\small\item\em Operator =. \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ User} \&u)
+\begin{DoxyCompactList}\small\item\em Operator ==. \end{DoxyCompactList}\item 
+string \textbf{ name} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie nazwy. \end{DoxyCompactList}\item 
+void \textbf{ set\+Name} (const string \&\textbf{ name})
+\begin{DoxyCompactList}\small\item\em Ustawianie nazwy. \end{DoxyCompactList}\item 
+int \textbf{ age} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie wieku. \end{DoxyCompactList}\item 
+void \textbf{ set\+Age} (int \textbf{ age})
+\begin{DoxyCompactList}\small\item\em Ustawianie wieku. \end{DoxyCompactList}\item 
+int \textbf{ pesel} () const
+\begin{DoxyCompactList}\small\item\em Pobieranie peselu. \end{DoxyCompactList}\item 
+void \textbf{ set\+Pesel} (int \textbf{ pesel})
+\begin{DoxyCompactList}\small\item\em Ustawianie peselu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ user\+Quantity} ()
+\begin{DoxyCompactList}\small\item\em Pobieranie ilości obiektów typu \doxyref{User}{p.}{class_user}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em imię \end{DoxyCompactList}\item 
+int \textbf{ m\+\_\+age}
+\begin{DoxyCompactList}\small\item\em wiek \end{DoxyCompactList}\item 
+int \textbf{ m\+\_\+pesel}
+\begin{DoxyCompactList}\small\item\em pesel \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ number\+\_\+of\+\_\+objects} =0
+\begin{DoxyCompactList}\small\item\em ilość obiektów typu \doxyref{User}{p.}{class_user} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Podobiekt klasy \doxyref{Electronic\+\_\+device}{p.}{class_electronic__device}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_user_af9b15717132c039af07bc148a106491e}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{User()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{string}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const int}]{age = {\ttfamily 0},  }\item[{const int}]{pesel = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny z parametrami domyślnymi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name=\char`\"{}\char`\"{}} & nazwa użytkownika \\
+\hline
+{\em age=0} & wiek użytkownika \\
+\hline
+{\em pesel=0} & pesel uzytkownika \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_user_a018a343a483ee5d702fc11c3d6383ac7}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{User()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{const \textbf{ User} \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&u} & kopiowany obiekt \doxyref{User}{p.}{class_user} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_user_ac00b72ad64eb4149f7b21b9f5468c2b2}} 
+\index{User@{User}!````~User@{$\sim$User}}
+\index{````~User@{$\sim$User}!User@{User}}
+\doxysubsubsection{$\sim$User()}
+{\footnotesize\ttfamily User\+::$\sim$\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxyref{User}{p.}{class_user}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_user_a95e8e5e678d8b4e404647d9eb2d752b4}} 
+\index{User@{User}!age@{age}}
+\index{age@{age}!User@{User}}
+\doxysubsubsection{age()}
+{\footnotesize\ttfamily int User\+::age (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie wieku. 
+
+\begin{DoxyReturn}{Returns}
+zwraca wiek użytkownika 
+\end{DoxyReturn}
+\mbox{\label{class_user_ad0aef751e4a369c23828a665fe370dc4}} 
+\index{User@{User}!name@{name}}
+\index{name@{name}!User@{User}}
+\doxysubsubsection{name()}
+{\footnotesize\ttfamily string User\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie nazwy. 
+
+\begin{DoxyReturn}{Returns}
+zwraca nazwę obiektu 
+\end{DoxyReturn}
+\mbox{\label{class_user_a2bedf75049198d6218bd77f6df897c99}} 
+\index{User@{User}!operator=@{operator=}}
+\index{operator=@{operator=}!User@{User}}
+\doxysubsubsection{operator=()}
+{\footnotesize\ttfamily \textbf{ User} \& User\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ User} \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Operator =. 
+
+Operator kopiuje drugi obiekt typu \doxyref{User}{p.}{class_user} 
+\begin{DoxyParams}{Parameters}
+{\em \&u} & obiekt kopiowany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca kopię obiektu u 
+\end{DoxyReturn}
+\mbox{\label{class_user_a34d67985b78e53ddce1a018cb420d774}} 
+\index{User@{User}!operator==@{operator==}}
+\index{operator==@{operator==}!User@{User}}
+\doxysubsubsection{operator==()}
+{\footnotesize\ttfamily bool User\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ User} \&}]{u }\end{DoxyParamCaption})}
+
+
+
+Operator ==. 
+
+Operator porównujący ze sobą dwa obiekty typu \doxyref{User}{p.}{class_user} 
+\begin{DoxyParams}{Parameters}
+{\em \&u} & obiekt porównywany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca true lub false 
+\end{DoxyReturn}
+\mbox{\label{class_user_ac76227223b9056c895233f18ff3b6ff0}} 
+\index{User@{User}!pesel@{pesel}}
+\index{pesel@{pesel}!User@{User}}
+\doxysubsubsection{pesel()}
+{\footnotesize\ttfamily int User\+::pesel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Pobieranie peselu. 
+
+\begin{DoxyReturn}{Returns}
+zwraca pesel użytkownika 
+\end{DoxyReturn}
+\mbox{\label{class_user_a734c7864414bfe2e72e9fd09ea02d021}} 
+\index{User@{User}!setAge@{setAge}}
+\index{setAge@{setAge}!User@{User}}
+\doxysubsubsection{setAge()}
+{\footnotesize\ttfamily void User\+::set\+Age (\begin{DoxyParamCaption}\item[{int}]{age }\end{DoxyParamCaption})}
+
+
+
+Ustawianie wieku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em age} & wiek użytkownika \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_user_ac44eb16e566dd060399e8f87ceec3fac}} 
+\index{User@{User}!setName@{setName}}
+\index{setName@{setName}!User@{User}}
+\doxysubsubsection{setName()}
+{\footnotesize\ttfamily void User\+::set\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Ustawianie nazwy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&name} & nazwa obiektu \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_user_aa564d19085e2c64a6baa5f2f75491617}} 
+\index{User@{User}!setPesel@{setPesel}}
+\index{setPesel@{setPesel}!User@{User}}
+\doxysubsubsection{setPesel()}
+{\footnotesize\ttfamily void User\+::set\+Pesel (\begin{DoxyParamCaption}\item[{int}]{pesel }\end{DoxyParamCaption})}
+
+
+
+Ustawianie peselu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pesel} & pesel użytkownika \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_user_a35fcb7bb67ed6a372567307fabdbf1b7}} 
+\index{User@{User}!userQuantity@{userQuantity}}
+\index{userQuantity@{userQuantity}!User@{User}}
+\doxysubsubsection{userQuantity()}
+{\footnotesize\ttfamily int User\+::user\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pobieranie ilości obiektów typu \doxyref{User}{p.}{class_user}. 
+
+\begin{DoxyReturn}{Returns}
+zwraca ilość obiektów 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_user_a7e49dc791f35aa724bd489db46e409b6}} 
+\index{User@{User}!m\_age@{m\_age}}
+\index{m\_age@{m\_age}!User@{User}}
+\doxysubsubsection{m\_age}
+{\footnotesize\ttfamily int User\+::m\+\_\+age\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+wiek 
+
+\mbox{\label{class_user_a07be9435233d3b76c9bf1266607d8f24}} 
+\index{User@{User}!m\_name@{m\_name}}
+\index{m\_name@{m\_name}!User@{User}}
+\doxysubsubsection{m\_name}
+{\footnotesize\ttfamily string User\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+imię 
+
+\mbox{\label{class_user_a6d6a82be81f155d7561ea1fd42ac5972}} 
+\index{User@{User}!m\_pesel@{m\_pesel}}
+\index{m\_pesel@{m\_pesel}!User@{User}}
+\doxysubsubsection{m\_pesel}
+{\footnotesize\ttfamily int User\+::m\+\_\+pesel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+pesel 
+
+\mbox{\label{class_user_adbbbda8336fd334e2c40f40eff2dd53e}} 
+\index{User@{User}!number\_of\_objects@{number\_of\_objects}}
+\index{number\_of\_objects@{number\_of\_objects}!User@{User}}
+\doxysubsubsection{number\_of\_objects}
+{\footnotesize\ttfamily int User\+::number\+\_\+of\+\_\+objects =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+ilość obiektów typu \doxyref{User}{p.}{class_user} 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projekt2/\textbf{ user.\+h}\item 
+Projekt2/\textbf{ user.\+cpp}\end{DoxyCompactItemize}

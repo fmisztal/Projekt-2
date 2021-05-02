@@ -1,0 +1,98 @@
+\doxysection{Projekt2/\+Hearing\+\_\+aid.cpp File Reference}
+\label{_hearing__aid_8cpp}\index{Projekt2/Hearing\_aid.cpp@{Projekt2/Hearing\_aid.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}Hearing\+\_\+aid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}electronic\+\_\+device.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \textbf{ operator$<$$<$} (ostream \&os, \textbf{ Hearing\+\_\+aid} \&h)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$. \end{DoxyCompactList}\item 
+ostream \& \textbf{ operator$<$$<$=} (ostream \&os, \textbf{ Hearing\+\_\+aid} \&h)
+\begin{DoxyCompactList}\small\item\em Operator $<$$<$=. \end{DoxyCompactList}\item 
+istream \& \textbf{ operator$>$$>$} (istream \&is, \textbf{ Hearing\+\_\+aid} \&h)
+\begin{DoxyCompactList}\small\item\em Operator $>$$>$ \end{DoxyCompactList}\item 
+void \textbf{ operator$\vert$=} (double x, \textbf{ Hearing\+\_\+aid} \&h)
+\begin{DoxyCompactList}\small\item\em Operator $\vert$=. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{_hearing__aid_8cpp_a1146d4e43be40421395884511172e2ee}} 
+\index{Hearing\_aid.cpp@{Hearing\_aid.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Hearing\_aid.cpp@{Hearing\_aid.cpp}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{\textbf{ Hearing\+\_\+aid} \&}]{h }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$. 
+
+Operator wypisujący pola obiektu na strumień 
+\begin{DoxyParams}{Parameters}
+{\em \&h} & wypisywany obiekt \\
+\hline
+{\em \&os} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{_hearing__aid_8cpp_a11cabd9270565f596806138e95b10754}} 
+\index{Hearing\_aid.cpp@{Hearing\_aid.cpp}!operator$<$$<$=@{operator$<$$<$=}}
+\index{operator$<$$<$=@{operator$<$$<$=}!Hearing\_aid.cpp@{Hearing\_aid.cpp}}
+\doxysubsubsection{operator$<$$<$=()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$= (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{\textbf{ Hearing\+\_\+aid} \&}]{h }\end{DoxyParamCaption})}
+
+
+
+Operator $<$$<$=. 
+
+Operator wypisujący pola obiektu do bazy danych 
+\begin{DoxyParams}{Parameters}
+{\em \&h} & zapisywany obiekt \\
+\hline
+{\em \&os} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{_hearing__aid_8cpp_aef09dfd0de0838becbbfd7e76775e0f8}} 
+\index{Hearing\_aid.cpp@{Hearing\_aid.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Hearing\_aid.cpp@{Hearing\_aid.cpp}}
+\doxysubsubsection{operator$>$$>$()}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\textbf{ Hearing\+\_\+aid} \&}]{h }\end{DoxyParamCaption})}
+
+
+
+Operator $>$$>$ 
+
+Operator przypisuje polom danego obiektu wartości ze strumienia 
+\begin{DoxyParams}{Parameters}
+{\em \&h} & opisywany obiekt \\
+\hline
+{\em \&is} & strumień \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca strumień 
+\end{DoxyReturn}
+\mbox{\label{_hearing__aid_8cpp_a8874ea71f319621819d81f5324b7b9e7}} 
+\index{Hearing\_aid.cpp@{Hearing\_aid.cpp}!operator\texttt{"|}=@{operator\texttt{"|}=}}
+\index{operator\texttt{"|}=@{operator\texttt{"|}=}!Hearing\_aid.cpp@{Hearing\_aid.cpp}}
+\doxysubsubsection{operator\texttt{"|}=()}
+{\footnotesize\ttfamily void operator$\vert$= (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{\textbf{ Hearing\+\_\+aid} \&}]{h }\end{DoxyParamCaption})}
+
+
+
+Operator $\vert$=. 
+
+Operator przypisuje polom danego obiektu wartości ze strumienia 
+\begin{DoxyParams}{Parameters}
+{\em x} & nowa wartość amplifikacji \\
+\hline
+{\em \&h} & obiekt ze zmienianą amplifikacją \\
+\hline
+\end{DoxyParams}
