@@ -80,7 +80,7 @@ public:
     */
     void setPesel(int pesel);
 
-protected:
+private:
     string m_name; ///< imię
     int m_age; ///< wiek
     int m_pesel; ///< pesel

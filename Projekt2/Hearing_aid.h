@@ -116,7 +116,7 @@ public:
 
     vector<Parameter*> parameters; ///< wektor podobiektów dynamicznych typu Parameter
 
-protected:
+private:
     string m_name; ///< nazwa obiektu
     int m_number_of_parameters; ///< liczba parametrów
     double m_amplification_x; ///< wartość amplifikacji

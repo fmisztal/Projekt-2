@@ -67,7 +67,7 @@ public:
     */
     void setLifespan(int lifespan);
 
-protected:
+private:
     int m_size; ///< rozmiar pojemności baterii
     int m_lifespan; ///< długość czasu pracy baterii
     static int number_of_objects; ///<ilość obiektów typu Battery

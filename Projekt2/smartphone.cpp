@@ -136,10 +136,6 @@ ostream& operator<<=(ostream &ost, Smartphone &s)
 
 istream& operator>>(istream &is, Smartphone &s)
 {
-    #ifdef _DEBUG
-        cout << "operator>>" << endl;
-    #endif
-
     string temp;
     char sign;
     int inches, weight, megapiksels;
